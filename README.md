@@ -16,7 +16,7 @@
 
 ### 🌐 Live Portfolio
 
-[![Portfolio](https://img.shields.io/badge/🚀_View_Live_Portfolio-00e5c8?style=for-the-badge&logoColor=black)](https://ashishcherian15.github.io/Portfolio)
+[![Portfolio](https://img.shields.io/badge/🚀_View_Live_Portfolio-00e5c8?style=for-the-badge&logoColor=black)]([https://ashishcherian15.github.io/Portfolio](https://portfolio-green-nine-18.vercel.app/))
 
 > **Built with a single HTML file** — Supabase backend, neon UI, fully dynamic admin panel
 
@@ -89,23 +89,23 @@
 ## 🧑‍💻 About Me
 
 ```yaml
-name: Ashish Cherian
-location: Tiptur, Karnataka, India
-college: KIT - K.I.T. College of Engineering, Tiptur
-degree: B.E. Computer Science & Engineering
-cgpa: 8.15
-graduating: 2026
-status: ✅ Available for opportunities
+Name: Ashish Cherian
+Location: Mangalore, Karnataka, India
+College: Karavali Institute of Technology
+Degree: B.E. Computer Science & Engineering
+CGPA: 8
+Graduating: 2026
+Status: ✅ Available for opportunities
 
-skills:
-  frontend:   [React.js, HTML/CSS, JavaScript]
-  backend:    [Node.js, MongoDB]
-  mobile:     [Android, Jetpack Compose, Kotlin]
-  ml_ai:      [Python, Scikit-Learn, TF-IDF]
-  languages:  [Java, Python, C]
-  tools:      [Git, GitHub, VS Code, Vercel]
+Skills:
+  Frontend:   [React.js, HTML/CSS, JavaScript]
+  Backend:    [Node.js, MongoDB]
+  Mobile:     [Android, Jetpack Compose, Kotlin]
+  Ml_ai:      [Python, Scikit-Learn, TF-IDF]
+  lLnguages:  [Java, Python, C]
+  Tools:      [Git, GitHub, VS Code, Vercel]
 
-languages_spoken:
+Languages_spoken:
   - English    → Professional
   - Kannada    → Native
   - Hindi      → Conversational
@@ -180,7 +180,7 @@ languages_spoken:
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:8b5cf6,100:00e5c8&height=120&section=footer&text=Thanks%20for%20visiting!&fontSize=24&fontColor=ffffff&fontAlignY=65&animation=fadeIn" width="100%"/>
 
-**© 2025 Ashish Cherian. All rights reserved.**
+**© 2026 Ashish Cherian. All rights reserved.**
 
 *Unauthorized copying or reproduction of this portfolio's design or code is prohibited.*
 
