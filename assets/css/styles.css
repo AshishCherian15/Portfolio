@@ -827,7 +827,7 @@ footer { background: var(--surf); border-top: 1px solid var(--bdr); padding: 28p
 â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 #loginScreen {
   position: fixed; inset: 0; background: rgba(8,12,20,.97);
-  z-index: 9500; display: none; align-items: center; justify-content: center;
+  z-index: 100001; display: none; align-items: center; justify-content: center;
 }
 #loginScreen.on { display: flex; }
 .login-box {

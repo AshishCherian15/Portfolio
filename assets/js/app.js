@@ -577,9 +577,13 @@ function showLogin(){
   document.getElementById('lEmail').value='';
   document.getElementById('lPass').value='';
   document.getElementById('loginErr').style.display='none';
+  document.getElementById('maintenanceScreen')?.classList.remove('active');
   document.getElementById('loginScreen').classList.add('on');
 }
-function hideLogin(){ document.getElementById('loginScreen').classList.remove('on'); }
+function hideLogin(){
+  document.getElementById('loginScreen').classList.remove('on');
+  checkMaintenance();
+}
 async function doLogin(){
   const email=document.getElementById('lEmail').value.trim();
   const pass=document.getElementById('lPass').value;
