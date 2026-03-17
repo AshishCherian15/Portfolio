@@ -997,6 +997,8 @@ textarea:disabled {
 .modal-hd { font-family:var(--font-h); font-size:18px; font-weight:700; margin-bottom:20px; display:flex; justify-content:space-between; align-items:center; }
 .modal-close-btn { background:none; border:none; color:var(--text3); font-size:22px; cursor:pointer; padding:0; line-height:1; transition:.2s; }
 .modal-close-btn:hover { color:var(--text); }
+@keyframes bob { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(-7px)} }
+
 
 /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    RESPONSIVE
