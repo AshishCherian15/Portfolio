@@ -1,21 +1,19 @@
 ﻿
-/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-   DATA & STORAGE
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+/* DATA & STORAGE */
 const DEFS = {
-  profile:{name:"Ashish Cherian",role:"Full Stack Developer",greeting:"Hello, It's Me ðŸ‘‹",tagline:"Building reliable apps with modern design.",typingRoles:"Full Stack Developer,Android Developer,ML Engineer,UI/UX Enthusiast",btnPrimary:"Hire Me",btnSecondary:"Download CV",desc:"Passionate about building innovative web and Android applications. Currently pursuing B.E. in Computer Science at KIT, Tiptur with a CGPA of 8.15.",bio:"I'm Ashish Cherian, a final-year Computer Science and Engineering student at KIT, Tiptur. I love building things â€” from web apps to Android applications. With skills in React, Node.js, Android Jetpack Compose, and Machine Learning, I'm ready for real-world challenges.",location:"Tiptur, Karnataka",cgpa:"8.15",year:"2026",projects:"5+",certs:"4+",email:"ashishcherian15@gmail.com",phone:"+91 9535570326",college:"KIT, Tiptur",status:"Available",avatar:null,aboutSub:"Passionate CSE student and developer based in Karnataka, India.",navBrand:"AC"},
+  profile:{name:"Ashish Cherian",role:"Full Stack Developer",greeting:"Hello, It's Me",tagline:"Building reliable apps with modern design.",typingRoles:"Full Stack Developer,Android Developer,ML Engineer,UI/UX Enthusiast",btnPrimary:"Hire Me",btnSecondary:"Download CV",desc:"Passionate about building innovative web and Android applications. Currently pursuing B.E. in Computer Science at KIT, Tiptur with a CGPA of 8.15.",bio:"I'm Ashish Cherian, a final-year Computer Science and Engineering student at KIT, Tiptur. I love building things - from web apps to Android applications. With skills in React, Node.js, Android Jetpack Compose, and Machine Learning, I'm ready for real-world challenges.",location:"Tiptur, Karnataka",cgpa:"8.15",year:"2026",projects:"5+",certs:"4+",email:"ashishcherian15@gmail.com",phone:"+91 9535570326",college:"KIT, Tiptur",status:"Available",avatar:null,aboutSub:"Passionate CSE student and developer based in Karnataka, India.",navBrand:"AC"},
   education:[
-    {id:1,icon:"ðŸŽ“",degree:"B.E. in Computer Science & Engineering",inst:"KIT - K.I.T. College of Engineering, Tiptur",year:"2022 â€“ 2026",grade:"CGPA: 8.15"},
-    {id:2,icon:"ðŸ“š",degree:"Pre-University (PCMC)",inst:"Canara PU College",year:"2020 â€“ 2022",grade:"91.5%"},
-    {id:3,icon:"ðŸ«",degree:"SSLC â€“ Secondary Education",inst:"",year:"2019 â€“ 2020",grade:"92%"}
+    {id:1,icon:"Grad",degree:"B.E. in Computer Science & Engineering",inst:"KIT - K.I.T. College of Engineering, Tiptur",year:"2022 - 2026",grade:"CGPA: 8.15"},
+    {id:2,icon:"PU",degree:"Pre-University (PCMC)",inst:"Canara PU College",year:"2020 - 2022",grade:"91.5%"},
+    {id:3,icon:"SSLC",degree:"SSLC - Secondary Education",inst:"",year:"2019 - 2020",grade:"92%"}
   ],
   skills:[
-    {id:1,category:"Frontend",icon:"âš›ï¸",name:"React.js"},{id:2,category:"Frontend",icon:"ðŸŒ",name:"HTML / CSS"},{id:3,category:"Frontend",icon:"ðŸŽ¨",name:"JavaScript"},
-    {id:4,category:"Backend",icon:"ðŸŸ¢",name:"Node.js"},{id:5,category:"Backend",icon:"ðŸƒ",name:"MongoDB"},
-    {id:6,category:"Languages",icon:"â˜•",name:"Java"},{id:7,category:"Languages",icon:"ðŸ",name:"Python"},{id:8,category:"Languages",icon:"âš™ï¸",name:"C"},
-    {id:9,category:"Mobile",icon:"ðŸ“±",name:"Android (Jetpack Compose)"},
-    {id:10,category:"ML / AI",icon:"ðŸ¤–",name:"Machine Learning"},{id:11,category:"ML / AI",icon:"ðŸ“Š",name:"Scikit-Learn"},
-    {id:12,category:"Tools",icon:"ðŸ”§",name:"Git & GitHub"},{id:13,category:"Tools",icon:"ðŸ’»",name:"VS Code"},{id:14,category:"Tools",icon:"ðŸš€",name:"Vercel"}
+    {id:1,category:"Frontend",icon:"FE",name:"React.js"},{id:2,category:"Frontend",icon:"WEB",name:"HTML / CSS"},{id:3,category:"Frontend",icon:"JS",name:"JavaScript"},
+    {id:4,category:"Backend",icon:"BE",name:"Node.js"},{id:5,category:"Backend",icon:"DB",name:"MongoDB"},
+    {id:6,category:"Languages",icon:"JAVA",name:"Java"},{id:7,category:"Languages",icon:"PY",name:"Python"},{id:8,category:"Languages",icon:"C",name:"C"},
+    {id:9,category:"Mobile",icon:"APP",name:"Android (Jetpack Compose)"},
+    {id:10,category:"ML / AI",icon:"ML",name:"Machine Learning"},{id:11,category:"ML / AI",icon:"SK",name:"Scikit-Learn"},
+    {id:12,category:"Tools",icon:"GIT",name:"Git & GitHub"},{id:13,category:"Tools",icon:"IDE",name:"VS Code"},{id:14,category:"Tools",icon:"DEP",name:"Vercel"}
   ],
   projects:[
     {id:1,name:"Pharmacy Management System",desc:"Full-stack web app for pharmacy inventory, billing, and patient records with role-based access.",tags:["React","Node.js","MongoDB"],github:"https://github.com/AshishCherian15",demo:"",media:null,mediaType:null},
@@ -33,11 +31,11 @@ const DEFS = {
   gallery:[],
   activities:[],
   languages:[
-    {id:1,flag:"ðŸ‡¬ðŸ‡§",name:"English",level:"Professional"},{id:2,flag:"ðŸ‡®ðŸ‡³",name:"Kannada",level:"Native"},
-    {id:3,flag:"ðŸ‡®ðŸ‡³",name:"Hindi",level:"Conversational"},{id:4,flag:"ðŸ‡®ðŸ‡³",name:"Malayalam",level:"Native"},
-    {id:5,flag:"ðŸ‡®ðŸ‡³",name:"Tulu",level:"Native"}
+    {id:1,flag:"EN",name:"English",level:"Professional"},{id:2,flag:"KN",name:"Kannada",level:"Native"},
+    {id:3,flag:"HI",name:"Hindi",level:"Conversational"},{id:4,flag:"ML",name:"Malayalam",level:"Native"},
+    {id:5,flag:"TU",name:"Tulu",level:"Native"}
   ],
-  hobbies:[{id:1,icon:"ðŸŽ®",name:"Gaming"},{id:2,icon:"ðŸŽµ",name:"Music"},{id:3,icon:"ðŸ“–",name:"Reading"},{id:4,icon:"ðŸ‹ï¸",name:"Fitness & Workout"},{id:5,icon:"ðŸŒ",name:"Travelling"},{id:6,icon:"ðŸ•",name:"Cooking"}],
+  hobbies:[{id:1,icon:"PLAY",name:"Gaming"},{id:2,icon:"MUSIC",name:"Music"},{id:3,icon:"READ",name:"Reading"},{id:4,icon:"FIT",name:"Fitness & Workout"},{id:5,icon:"TRAVEL",name:"Travelling"},{id:6,icon:"COOK",name:"Cooking"}],
   blog:[],
   contact:{email:"ashishcherian15@gmail.com",phone:"+91 9535570326",location:"Tiptur, Karnataka, India",website:""},
   social:[
@@ -49,12 +47,29 @@ const DEFS = {
   visibility:{hero:true,about:true,education:true,skills:true,projects:true,experience:true,certificates:true,gallery:true,activities:true,languages:true,hobbies:true,blog:true,contact:true},
   resume:{url:"",dataUrl:null,name:"",lastUpdated:""},
   github:{user:"",repo:"",token:"",branch:"main",ghUser2:""},
-  maintenance:{enabled:false,message:"I'm currently updating my portfolio with new projects. Back shortly!",logo:"AC."}
+  maintenance:{enabled:false,message:"I'm currently updating my portfolio with new projects. Back shortly!",logo:"Ashish Cherian"}
 };
 
 let D = JSON.parse(JSON.stringify(DEFS));
 let _eid = null, _etyp = null;
 const _busyLocks = new Set();
+let _visibilityDirty = false;
+
+const NAV_ITEMS = [
+  ['hero','Home'],
+  ['about','About'],
+  ['education','Education'],
+  ['skills','Skills'],
+  ['projects','Projects'],
+  ['experience','Work'],
+  ['certificates','Certificates'],
+  ['gallery','Gallery'],
+  ['activities','Activities'],
+  ['languages','Languages'],
+  ['hobbies','Hobbies'],
+  ['blog','Blog'],
+  ['contact','Contact']
+];
 
 function acquireLock(key){
   if(_busyLocks.has(key)) return false;
@@ -145,6 +160,14 @@ function safeRender(label, fn){
   catch (err){ console.error(`Render failed: ${label}`, err); }
 }
 
+function isSectionVisible(key){
+  return (D.visibility||{})[key] !== false;
+}
+
+function getVisibleNavItems(){
+  return NAV_ITEMS.filter(([id]) => isSectionVisible(id));
+}
+
 function deepMerge(target, source){
   for(const key in source){
     if(source[key]&&typeof source[key]==='object'&&!Array.isArray(source[key])&&target[key]&&typeof target[key]==='object'){
@@ -154,12 +177,57 @@ function deepMerge(target, source){
   return target;
 }
 
+const MOJIBAKE_RE = /(Ã.|Â.|â.|ðŸ|ï¸|â€™|â€œ|â€|â€“|â€”|â€¢|â„¢|âœ|âš|â|â­)/;
+
+function repairMojibakeString(value){
+  if(typeof value !== 'string') return value;
+  if(!MOJIBAKE_RE.test(value)) return value;
+  if(/^(https?:|mailto:|tel:|data:|blob:)/i.test(value)) return value;
+  try {
+    const bytes = Uint8Array.from(Array.from(value), ch => ch.charCodeAt(0) & 0xff);
+    const decoded = new TextDecoder('utf-8').decode(bytes);
+    if(decoded && decoded !== value && !decoded.includes('�')) return decoded;
+  } catch (_) {}
+  return value;
+}
+
+function repairPortfolioData(node){
+  let changed = false;
+
+  function walk(value){
+    if(Array.isArray(value)){
+      return value.map(item => walk(item));
+    }
+    if(value && typeof value === 'object'){
+      const next = {};
+      Object.entries(value).forEach(([key, innerValue]) => {
+        next[key] = walk(innerValue);
+      });
+      return next;
+    }
+    if(typeof value === 'string'){
+      const repaired = repairMojibakeString(value);
+      if(repaired !== value) changed = true;
+      return repaired;
+    }
+    return value;
+  }
+
+  return { data: walk(node), changed };
+}
+
 async function loadData(){
   try {
     const { data, error } = await _supa.from('portfolio').select('data').eq('id', 1).single();
     if(error) throw error;
     if(data?.data) D = deepMerge(JSON.parse(JSON.stringify(DEFS)), data.data);
     normalizeMediaData();
+    const repaired = repairPortfolioData(D);
+    D = repaired.data;
+    if(repaired.changed){
+      try { await _supa.from('portfolio').upsert({id:1, data:D}); }
+      catch(saveErr){ console.warn('Supabase repair save failed:', saveErr); }
+    }
   } catch(e){
     console.warn('Supabase load failed, using defaults:', e);
     D = JSON.parse(JSON.stringify(DEFS));
@@ -168,6 +236,7 @@ async function loadData(){
 
 async function saveData(silent){
   try {
+    D = repairPortfolioData(D).data;
     const { error } = await _supa.from('portfolio').upsert({id:1, data:D});
     if(error) throw error;
     const adminOpen = document.getElementById('adminPanel')?.classList.contains('on');
@@ -193,7 +262,7 @@ function checkMaintenance(){
   if(m.enabled && !adminOpen){
     ms.classList.add('active');
     document.getElementById('maintMsg').textContent = m.message||DEFS.maintenance.message;
-    document.getElementById('maintLogo').textContent = m.logo||'AC.';
+    document.getElementById('maintLogo').textContent = m.logo||'Ashish Cherian';
   } else {
     ms.classList.remove('active');
   }
@@ -217,7 +286,7 @@ async function saveMaintSettings(){
   D.maintenance.logo = document.getElementById('maintLogoInput').value;
   await saveData(true);
   document.getElementById('maintMsg').textContent = D.maintenance.message;
-  document.getElementById('maintLogo').textContent = D.maintenance.logo||'AC.';
+  document.getElementById('maintLogo').textContent = D.maintenance.logo||'Ashish Cherian';
   showToast("Maintenance settings saved!","success");
   setBusyState(btn, false);
   releaseLock('maint-save');
@@ -242,11 +311,13 @@ function renderAll(){
   safeRender('blog', renderBlog);
   safeRender('contact', renderContact);
   safeRender('social', renderSocial);
+  refreshMotionTargets();
+  initLazyMedia();
   applyVis();
 }
 
 function renderNav(){
-  const navs=[['hero','Home'],['about','About'],['education','Edu'],['skills','Skills'],['projects','Projects'],['experience','Work'],['certificates','Certs'],['activities','Activities'],['contact','Contact']];
+  const navs=getVisibleNavItems();
   document.getElementById('navLinks').innerHTML=navs.map(([id,l])=>`<li><a href="#${id}" onclick="scrollTo2('${id}');closeMobileNav();return false">${esc(l)}</a></li>`).join('');
   updateNavState();
 }
@@ -255,10 +326,10 @@ function renderHero(){
   const p=D.profile;
   const avEl=document.getElementById('heroAv');
   if(p.avatar){ avEl.innerHTML=`<img src="${safeUrl(p.avatar)}" alt="${esc(p.name)}" style="width:100%;height:100%;object-fit:cover;object-position:top">`; }
-  else { avEl.innerHTML=`<span class="hex-default">ðŸ§‘â€ðŸ’»</span>`; }
+  else { avEl.innerHTML=`<span class="hex-default"><i class="fas fa-user-tie"></i></span>`; }
   const admAv=document.getElementById('admAv');
-  if(admAv){ admAv.innerHTML=p.avatar?`<img src="${safeUrl(p.avatar)}" style="width:100%;height:100%;object-fit:cover;border-radius:50%">`:`<span style="font-size:36px">ðŸ§‘â€ðŸ’»</span>`; }
-  document.getElementById('heroGreeting').textContent=p.greeting||"Hello, It's Me ðŸ‘‹";
+  if(admAv){ admAv.innerHTML=p.avatar?`<img src="${safeUrl(p.avatar)}" style="width:100%;height:100%;object-fit:cover;border-radius:50%">`:`<span style="font-size:36px"><i class="fas fa-user-tie"></i></span>`; }
+  document.getElementById('heroGreeting').textContent=p.greeting||"Hello, It's Me";
   document.getElementById('heroName').textContent=p.name||'Ashish Cherian';
   document.getElementById('heroRole').textContent=p.role||'Full Stack Developer';
   document.getElementById('heroTagline').textContent=p.tagline||'Building reliable apps with modern design.';
@@ -266,8 +337,8 @@ function renderHero(){
   const bs=document.getElementById('heroBtnSecondary');
   if(bp) bp.innerHTML=`<i class="fas fa-paper-plane"></i> ${esc(p.btnPrimary||'Hire Me')}`;
   if(bs) bs.innerHTML=`<i class="fas fa-download"></i> ${esc(p.btnSecondary||'Download CV')}`;
-  const badges={Available:'âœ… Available',Busy:'ðŸ”´ Busy',Open:'ðŸŸ¡ Open'};
-  document.getElementById('heroBadge').textContent=badges[p.status]||'âœ… Available';
+  const badges={Available:'Available',Busy:'Busy',Open:'Open'};
+  document.getElementById('heroBadge').textContent=badges[p.status]||'Available';
   document.getElementById('heroSocials').innerHTML=(D.social||[]).map(s=>{
     const url = safeUrl(s.url);
     if(!url) return '';
@@ -301,7 +372,7 @@ function dr(ico,label,val){return`<div class="det-row"><div class="det-ico"><i c
 function renderEdu(){
   document.getElementById('eduList').innerHTML=(D.education||[]).map(e=>`
     <div class="edu-card reveal">
-      <div class="edu-ico">${e.icon||'ðŸŽ“'}</div>
+      <div class="edu-ico">${e.icon||'EDU'}</div>
       <div style="flex:1">
         <div class="edu-deg">${e.degree}</div>
         <div class="edu-inst">${e.inst||''}</div>
@@ -325,7 +396,7 @@ function renderSkills(){
 function renderProj(){
   document.getElementById('projGrid').innerHTML=(D.projects||[]).map(p=>`
     <div class="proj-card reveal">
-      <div class="proj-thumb">${p.media?mediaTag(p.media,inferMediaType(p.media,p.mediaType),'width:100%;height:100%;object-fit:cover'):`<div class="proj-thumb-ico">ðŸ’»</div>`}</div>
+      <div class="proj-thumb">${p.media?mediaTag(p.media,inferMediaType(p.media,p.mediaType),'width:100%;height:100%;object-fit:cover'):`<div class="proj-thumb-ico">PROJECT</div>`}</div>
       <div class="proj-body">
         <div class="proj-name">${p.name}</div>
         <div class="proj-desc">${p.desc||''}</div>
@@ -360,7 +431,7 @@ function renderCerts(){
     return `
     <div class="cert-card reveal" onclick="viewCert(${c.id})">
       <div class="cert-thumb">
-        ${hasMedia?mediaTag(c.media,type,'width:100%;height:100%;object-fit:cover'):`<div class="cert-thumb-ico">ðŸ†</div>`}
+        ${hasMedia?mediaTag(c.media,type,'width:100%;height:100%;object-fit:cover'):`<div class="cert-thumb-ico">AWARD</div>`}
         <div class="cert-view-overlay"><i class="fas fa-expand"></i></div>
       </div>
       <div class="cert-body">
@@ -393,7 +464,7 @@ function renderGallery(){
   const items=D.gallery||[];
   document.getElementById('galGrid').innerHTML=items.length?items.map(g=>`
     <div class="gal-item reveal" onclick="openLB('${g.media}', '${inferMediaType(g.media,g.mediaType)}')">
-      ${g.media&&g.media.length>10?mediaTag(g.media,inferMediaType(g.media,g.mediaType),'width:100%;height:100%;object-fit:cover'):`<div class="gal-placeholder">ðŸ–¼ï¸</div>`}
+      ${g.media&&g.media.length>10?mediaTag(g.media,inferMediaType(g.media,g.mediaType),'width:100%;height:100%;object-fit:cover'):`<div class="gal-placeholder">MEDIA</div>`}
       <div class="gal-overlay"><i class="fas fa-expand"></i>${g.caption?`<span class="gal-cap">${g.caption}</span>`:''}</div>
     </div>`).join(''):`<p style="color:var(--text3)">No gallery items yet.</p>`;
 }
@@ -403,7 +474,7 @@ function renderActivities(){
   const wrap=document.getElementById('ghContribWrap');
   if(ghUser){
     wrap.style.display='block';
-    document.getElementById('ghContribImg').src=`https://ghchart.rshah.org/00e5c8/${ghUser}`;
+    document.getElementById('ghContribImg').src=`https://ghchart.rshah.org/b084ff/${ghUser}`;
   } else { wrap.style.display='none'; }
   const items=D.activities||[];
   document.getElementById('actGrid').innerHTML=items.length?items.map(a=>`
@@ -431,12 +502,12 @@ function renderActivities(){
 function renderLangs(){
   document.getElementById('langGrid').innerHTML=(D.languages||[]).map(l=>`
     <div class="lang-card reveal">
-      <span class="lang-flag">${l.flag||'ðŸŒ'}</span>
+      <span class="lang-flag">${l.flag||'GL'}</span>
       <div><div class="lang-name">${l.name}</div><div class="lang-lvl">${l.level||''}</div></div>
     </div>`).join('');
 }
 function renderHobbies(){
-  document.getElementById('hobbyWrap').innerHTML=(D.hobbies||[]).map(h=>`<div class="hobby-pill">${h.icon||'â­'} ${h.name}</div>`).join('');
+  document.getElementById('hobbyWrap').innerHTML=(D.hobbies||[]).map(h=>`<div class="hobby-pill">${h.icon||'HB'} ${h.name}</div>`).join('');
 }
 function renderBlog(){
   const items=D.blog||[];
@@ -454,10 +525,10 @@ function renderContact(){
   const c=D.contact||{},p=D.profile||{};
   const e=c.email||p.email||'',ph=c.phone||p.phone||'',l=c.location||p.location||'',w=c.website||'';
   document.getElementById('contactCards').innerHTML=`
-    ${e?`<a class="contact-card" href="mailto:${e}"><div class="contact-ico" style="background:rgba(0,229,200,.08);color:var(--cyan)"><i class="fas fa-envelope"></i></div><div><div class="contact-label">Email</div><div class="contact-val">${e}</div></div></a>`:''}
-    ${ph?`<a class="contact-card" href="tel:${ph}"><div class="contact-ico" style="background:rgba(0,229,200,.08);color:var(--cyan)"><i class="fas fa-phone"></i></div><div><div class="contact-label">Phone</div><div class="contact-val">${ph}</div></div></a>`:''}
-    ${l?`<div class="contact-card"><div class="contact-ico" style="background:rgba(139,92,246,.08);color:var(--purple)"><i class="fas fa-map-marker-alt"></i></div><div><div class="contact-label">Location</div><div class="contact-val">${l}</div></div></div>`:''}
-    ${w?`<a class="contact-card" href="${w}" target="_blank"><div class="contact-ico" style="background:rgba(245,158,11,.08);color:var(--yellow)"><i class="fas fa-globe"></i></div><div><div class="contact-label">Website</div><div class="contact-val">${w}</div></div></a>`:''}`;
+    ${e?`<a class="contact-card" href="mailto:${e}"><div class="contact-ico" style="background:rgba(176,132,255,.14);color:var(--cyan)"><i class="fas fa-envelope"></i></div><div><div class="contact-label">Email</div><div class="contact-val">${e}</div></div></a>`:''}
+    ${ph?`<a class="contact-card" href="tel:${ph}"><div class="contact-ico" style="background:rgba(176,132,255,.14);color:var(--cyan)"><i class="fas fa-phone"></i></div><div><div class="contact-label">Phone</div><div class="contact-val">${ph}</div></div></a>`:''}
+    ${l?`<div class="contact-card"><div class="contact-ico" style="background:rgba(255,94,168,.14);color:var(--purple)"><i class="fas fa-map-marker-alt"></i></div><div><div class="contact-label">Location</div><div class="contact-val">${l}</div></div></div>`:''}
+    ${w?`<a class="contact-card" href="${w}" target="_blank"><div class="contact-ico" style="background:rgba(248,251,255,.12);color:var(--yellow)"><i class="fas fa-globe"></i></div><div><div class="contact-label">Website</div><div class="contact-val">${w}</div></div></a>`:''}`;
 }
 function renderSocial(){
   document.getElementById('socGrid').innerHTML=(D.social||[]).map(s=>`
@@ -472,19 +543,20 @@ function applyVis(){
     const el=document.getElementById(k);
     if(el) el.classList.toggle('sec-hidden',v[k]===false);
   });
+  updateNavState();
 }
 
 /* UTILITY */
 function mediaTag(src,type,style=''){
-  if(!src||src.length<10) return '<div class="proj-thumb-ico">ðŸ’»</div>';
+  if(!src||src.length<10) return '<div class="proj-thumb-ico">MEDIA</div>';
   const mediaSrc = safeMediaSrc(src);
-  if(!mediaSrc) return '<div class="proj-thumb-ico">âš ï¸</div>';
+  if(!mediaSrc) return '<div class="proj-thumb-ico">WARN</div>';
   const kind = inferMediaType(mediaSrc, type);
   const styleText = style || '';
   const s=styleText?` style="${styleText}"`:'';
-  if(kind==='video') return `<div class="media-frame"${s}><video autoplay muted loop playsinline onerror="handleMediaError(this, 'video')"><source src="${mediaSrc}"></video><div class="media-fallback" style="display:none"><span>🎬</span><small>Video unavailable</small></div></div>`;
-  if(kind==='pdf') return `<div class="media-frame"${s}><div class="media-fallback" style="display:flex"><span>📄</span><small>PDF preview</small></div></div>`;
-  return `<div class="media-frame"${s}><img src="${mediaSrc}" alt="" loading="lazy" onerror="handleMediaError(this, 'image')"><div class="media-fallback" style="display:none"><span>🖼️</span><small>Image unavailable</small></div></div>`;
+  if(kind==='video') return `<div class="media-frame is-pending"${s}><video class="lazy-video" autoplay muted loop playsinline preload="none" data-src="${mediaSrc}" onerror="handleMediaError(this, 'video')"></video><div class="media-fallback" style="display:none"><span>VIDEO</span><small>Video unavailable</small></div></div>`;
+  if(kind==='pdf') return `<div class="media-frame"${s}><div class="media-fallback" style="display:flex"><span>PDF</span><small>PDF preview</small></div></div>`;
+  return `<div class="media-frame is-pending"${s}><img class="lazy-media" data-src="${mediaSrc}" alt="" loading="lazy" decoding="async" fetchpriority="low" onerror="handleMediaError(this, 'image')"><div class="media-fallback" style="display:none"><span>IMAGE</span><small>Image unavailable</small></div></div>`;
 }
 function handleMediaError(el){
   if(!el) return;
@@ -494,6 +566,45 @@ function handleMediaError(el){
   if(fallback) fallback.style.display='flex';
 }
 window.handleMediaError = handleMediaError;
+
+let _lazyMediaObserver = null;
+
+function initLazyMedia(){
+  if(!_lazyMediaObserver){
+    _lazyMediaObserver = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        if(!entry.isIntersecting) return;
+        const el = entry.target;
+        if(el.dataset.loaded === '1'){
+          _lazyMediaObserver.unobserve(el);
+          return;
+        }
+        if(el.tagName === 'IMG'){
+          const src = el.dataset.src;
+          if(src){
+            el.src = src;
+            el.dataset.loaded = '1';
+            el.addEventListener('load', ()=>el.closest('.media-frame')?.classList.remove('is-pending'), { once:true });
+          }
+        } else if(el.tagName === 'VIDEO'){
+          const src = el.dataset.src;
+          if(src){
+            el.src = src;
+            el.dataset.loaded = '1';
+            el.load();
+            const clearPending = ()=>el.closest('.media-frame')?.classList.remove('is-pending');
+            el.addEventListener('loadeddata', clearPending, { once:true });
+          }
+        }
+        _lazyMediaObserver.unobserve(el);
+      });
+    }, { rootMargin: '220px 0px', threshold: 0.12 });
+  }
+
+  document.querySelectorAll('img.lazy-media:not([data-loaded="1"]), video.lazy-video:not([data-loaded="1"])').forEach(el=>{
+    _lazyMediaObserver.observe(el);
+  });
+}
 
 function setActiveNav(id){
   document.querySelectorAll('#navLinks a').forEach(a=>a.classList.remove('active'));
@@ -507,8 +618,12 @@ function updateNavState(){
   if(!nav) return;
   nav.classList.toggle('nav-scrolled', window.scrollY > 18);
 
-  const secs=['hero','about','education','skills','projects','experience','certificates','activities','contact'];
-  let cur='hero';
+  const secs=getVisibleNavItems().map(([id])=>id);
+  if(!secs.length){
+    setActiveNav('');
+    return;
+  }
+  let cur=secs[0];
   secs.forEach(id=>{
     const el=document.getElementById(id);
     if(!el || el.classList.contains('sec-hidden')) return;
@@ -529,12 +644,84 @@ function closeMobileNav(){ document.getElementById('navLinks').classList.remove(
 
 /* REVEAL */
 function initReveal(){
-  const ob=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');ob.unobserve(e.target);}}),{threshold:.08});
+  const ob=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');ob.unobserve(e.target);}}),{threshold:.12, rootMargin:'0px 0px -8% 0px'});
   document.querySelectorAll('.reveal').forEach(el=>ob.observe(el));
 }
 function reobserve(){
-  const ob=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');ob.unobserve(e.target);}}),{threshold:.08});
+  const ob=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');ob.unobserve(e.target);}}),{threshold:.12, rootMargin:'0px 0px -8% 0px'});
   document.querySelectorAll('.reveal:not(.in)').forEach(el=>ob.observe(el));
+}
+
+let _motionInitDone = false;
+
+function refreshMotionTargets(){
+  document.querySelectorAll('.proj-card,.skill-cat-card,.cert-card,.edu-card,.exp-card,.act-card,.blog-card,.lang-card,.contact-card,.soc-card').forEach(card=>{
+    card.classList.add('motion-card');
+  });
+}
+
+function initMotionStudio(){
+  if(_motionInitDone) return;
+  _motionInitDone = true;
+
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduce) return;
+
+  const progress = document.getElementById('scrollProgress');
+  const hero = document.getElementById('hero');
+  const h1 = document.querySelector('.hbg1');
+  const h2 = document.querySelector('.hbg2');
+  const h3 = document.querySelector('.hbg3');
+  const hex = document.querySelector('.hex-wrap');
+
+  const updateProgress = () => {
+    if(!progress) return;
+    const doc = document.documentElement;
+    const max = Math.max(1, doc.scrollHeight - doc.clientHeight);
+    const ratio = Math.min(1, Math.max(0, window.scrollY / max));
+    progress.style.width = `${ratio * 100}%`;
+  };
+
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  updateProgress();
+
+  if(hero){
+    hero.addEventListener('mousemove', (e)=>{
+      const r = hero.getBoundingClientRect();
+      const x = (e.clientX - r.left) / r.width - 0.5;
+      const y = (e.clientY - r.top) / r.height - 0.5;
+      if(h1) h1.style.transform = `translate(${x*18}px, ${y*14}px)`;
+      if(h2) h2.style.transform = `translate(${x*-14}px, ${y*-10}px)`;
+      if(h3) h3.style.transform = `translate(${x*10}px, ${y*-8}px)`;
+      if(hex) hex.style.transform = `translate(${x*8}px, ${y*6}px)`;
+    });
+    hero.addEventListener('mouseleave', ()=>{
+      if(h1) h1.style.transform = '';
+      if(h2) h2.style.transform = '';
+      if(h3) h3.style.transform = '';
+      if(hex) hex.style.transform = '';
+    });
+  }
+
+  document.addEventListener('mousemove',(e)=>{
+    document.querySelectorAll('.motion-card').forEach(card=>{
+      const rect = card.getBoundingClientRect();
+      if(e.clientX < rect.left || e.clientX > rect.right || e.clientY < rect.top || e.clientY > rect.bottom) return;
+      const px = ((e.clientX - rect.left) / rect.width) * 100;
+      const py = ((e.clientY - rect.top) / rect.height) * 100;
+      card.style.setProperty('--mx', `${px}%`);
+      card.style.setProperty('--my', `${py}%`);
+      const rx = (e.clientY - rect.top - rect.height/2) / 16;
+      const ry = (e.clientX - rect.left - rect.width/2) / -16;
+      card.style.transform = `perspective(900px) rotateX(${Math.max(-6,Math.min(6,rx))}deg) rotateY(${Math.max(-6,Math.min(6,ry))}deg) translateY(-2px)`;
+    });
+  });
+
+  document.addEventListener('mouseleave', ()=>{
+    document.querySelectorAll('.motion-card').forEach(card=>{
+      card.style.transform = '';
+    });
+  });
 }
 
 /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
@@ -596,7 +783,7 @@ async function doLogin(){
     if(error) throw error;
     hideLogin(); openAdmin();
   } catch(e){
-    err.textContent='âŒ '+e.message;
+    err.textContent='Error: '+e.message;
     err.style.display='block';
   } finally {
     btn.disabled=false;
@@ -609,15 +796,15 @@ async function changePassword(){
   const nw=document.getElementById('newPass').value;
   const cf=document.getElementById('confPass').value;
   const msg=document.getElementById('passMsg');
-  if(nw.length<6){msg.style.display='block';msg.style.color='var(--red)';msg.textContent='âŒ New password must be at least 6 characters.';return;}
-  if(nw!==cf){msg.style.display='block';msg.style.color='var(--red)';msg.textContent='âŒ Passwords do not match.';return;}
+  if(nw.length<6){msg.style.display='block';msg.style.color='var(--red)';msg.textContent='Error: New password must be at least 6 characters.';return;}
+  if(nw!==cf){msg.style.display='block';msg.style.color='var(--red)';msg.textContent='Error: Passwords do not match.';return;}
   try {
     const { error } = await _supa.auth.updateUser({password: nw});
     if(error) throw error;
-    msg.style.display='block';msg.style.color='var(--cyan)';msg.textContent='âœ… Password changed successfully!';
+    msg.style.display='block';msg.style.color='var(--cyan)';msg.textContent='Success: Password changed successfully.';
     document.getElementById('newPass').value='';document.getElementById('confPass').value='';
   } catch(e){
-    msg.style.display='block';msg.style.color='var(--red)';msg.textContent='âŒ '+e.message;
+    msg.style.display='block';msg.style.color='var(--red)';msg.textContent='Error: '+e.message;
   }
 }
 
@@ -670,22 +857,23 @@ function fillAdminForms(){
   sv('pProj',p.projects);sv('pEmail',p.email);sv('pPhone',p.phone);sv('pCollege',p.college);
   document.getElementById('pStatus').value=p.status||'Available';
   const aa=document.getElementById('admAv');
-  if(aa) aa.innerHTML=p.avatar?`<img src="${p.avatar}" style="width:100%;height:100%;object-fit:cover;border-radius:50%">`:`<span style="font-size:36px">ðŸ§‘â€ðŸ’»</span>`;
+  if(aa) aa.innerHTML=p.avatar?`<img src="${p.avatar}" style="width:100%;height:100%;object-fit:cover;border-radius:50%">`:`<span style="font-size:18px;font-weight:800;letter-spacing:.08em">ADMIN</span>`;
   const c=D.contact||{};
   sv('cEmail',c.email||p.email);sv('cPhone',c.phone||p.phone);sv('cLoc',c.location||p.location);sv('cWeb',c.website||'');
   const r=D.resume||{};
   sv('resumeUrl',r.url||'');
+  renderResumePreview(r.url||r.dataUrl||'', inferMediaType(r.url||r.dataUrl||'', ''));
   if(r.name) document.getElementById('resumeStatus').textContent='Current: '+r.name+(r.lastUpdated?' ('+r.lastUpdated+')':'');
   if(r.lastUpdated) document.getElementById('resumeLastUpdated').textContent='Last updated: '+r.lastUpdated;
   const secEmail=document.getElementById('secEmail');
-  _supa.auth.getUser().then(({data})=>{ if(secEmail) secEmail.textContent=data?.user?.email||'â€”'; });
+  _supa.auth.getUser().then(({data})=>{ if(secEmail) secEmail.textContent=data?.user?.email||'-'; });
   const gh=D.github||{};
   sv('ghUser',gh.user);sv('ghRepo',gh.repo);sv('ghBranch',gh.branch||'main');sv('ghUser2',gh.ghUser2||'');
-  if(gh.token) document.getElementById('ghToken').value='â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢';
+  if(gh.token) document.getElementById('ghToken').value='**********';
   const m=D.maintenance||{};
   document.getElementById('maintToggle').checked=!!m.enabled;
   sv('maintMsgInput',m.message||DEFS.maintenance.message);
-  sv('maintLogoInput',m.logo||'AC.');
+  sv('maintLogoInput',m.logo||'Ashish Cherian');
 }
 
 async function saveProfile(){
@@ -754,26 +942,51 @@ function saveGHUser(){
   showToast("GitHub username saved!","success");
 }
 
+function updateVisibilitySaveState(message='No pending changes.'){
+  const btn=document.getElementById('visSaveBtn');
+  const status=document.getElementById('visStatus');
+  if(btn) btn.disabled=!_visibilityDirty;
+  if(status) status.textContent=message;
+}
+
+function markVisibilityDirty(){
+  _visibilityDirty=true;
+  updateVisibilitySaveState('Unsaved visibility changes. Save to keep them after reload.');
+}
+
+async function saveVisibility(){
+  if(!_visibilityDirty) return;
+  if(!acquireLock('visibility-save')) return;
+  const btn=document.getElementById('visSaveBtn');
+  setBusyState(btn, true, 'Saving...');
+  const ok=await saveData();
+  if(ok){
+    _visibilityDirty=false;
+    renderNav();
+    applyVis();
+    updateVisibilitySaveState('Visibility saved.');
+  }
+  setBusyState(btn, false);
+  releaseLock('visibility-save');
+}
+
 async function uploadResume(input){
   if(!acquireLock('upload-resume')) return;
   const f=input.files[0];
   if(!f){ releaseLock('upload-resume'); return; }
   if(f.size>20*1024*1024){showToast("File too large (max 20MB)","error");document.getElementById('resumeErr').style.display='block';releaseLock('upload-resume');return;}
   document.getElementById('resumeErr').style.display='none';
-  document.getElementById('resumeStatus').textContent='â³ Uploading...';
+  document.getElementById('resumeStatus').textContent='Uploading...';
   const prevDisabled = input.disabled;
   input.disabled = true;
   const isPdf=f.type==='application/pdf';
   const isImg=f.type.startsWith('image/');
+  const isVid=f.type.startsWith('video/');
   try{
     const url=await supaUpload('resume/'+Date.now()+'_'+f.name, f);
     D.resume={url,dataUrl:null,name:f.name,lastUpdated:new Date().toLocaleDateString('en-IN')};
-    const imgPrev=document.getElementById('resumeImgPrev');
-    const pdfPrev=document.getElementById('resumePdfPrev');
-    imgPrev.style.display='none';pdfPrev.style.display='none';
-    if(isImg){imgPrev.src=url;imgPrev.style.display='block';}
-    else if(isPdf){pdfPrev.src=url;pdfPrev.style.display='block';}
-    document.getElementById('resumeStatus').textContent='âœ… Uploaded: '+f.name;
+    renderResumePreview(url, isVid?'video':isPdf?'pdf':isImg?'image':'');
+    document.getElementById('resumeStatus').textContent='Uploaded: '+f.name;
     document.getElementById('resumeLastUpdated').textContent='Last updated: '+D.resume.lastUpdated;
     await saveData();
   }catch(e){document.getElementById('resumeErr').style.display='block';document.getElementById('resumeStatus').textContent='';showToast("Upload failed: "+e.message,"error");}
@@ -787,18 +1000,55 @@ async function saveResumeUrl(){
   const url=document.getElementById('resumeUrl').value.trim();
   if(!url){showToast("Please enter a URL","error");setBusyState(btn,false);releaseLock('resume-url');return;}
   D.resume={url,dataUrl:null,name:url,lastUpdated:new Date().toLocaleDateString('en-IN')};
-  document.getElementById('resumeStatus').textContent='âœ… URL saved';
+  renderResumePreview(url);
+  document.getElementById('resumeStatus').textContent='URL saved';
   document.getElementById('resumeLastUpdated').textContent='Last updated: '+D.resume.lastUpdated;
   await saveData();
   setBusyState(btn, false);
   releaseLock('resume-url');
 }
+function previewResumeFromUrl(){
+  renderResumePreview(document.getElementById('resumeUrl').value.trim());
+}
+
+function renderResumePreview(src, explicitType=''){
+  const imgPrev=document.getElementById('resumeImgPrev');
+  const vidPrev=document.getElementById('resumeVidPrev');
+  const pdfPrev=document.getElementById('resumePdfPrev');
+  if(!imgPrev || !vidPrev || !pdfPrev) return;
+  const safe=safeMediaSrc(src);
+  const type=safe?inferMediaType(safe, explicitType):'';
+
+  imgPrev.style.display='none';
+  imgPrev.removeAttribute('src');
+  vidPrev.style.display='none';
+  vidPrev.pause();
+  vidPrev.removeAttribute('src');
+  vidPrev.load();
+  pdfPrev.style.display='none';
+  pdfPrev.removeAttribute('src');
+
+  if(!safe) return;
+  if(type==='video'){
+    vidPrev.src=safe;
+    vidPrev.style.display='block';
+    return;
+  }
+  if(type==='pdf'){
+    pdfPrev.src=safe;
+    pdfPrev.style.display='block';
+    return;
+  }
+  imgPrev.src=safe;
+  imgPrev.style.display='block';
+}
+
 function downloadResume(){
   const r=D.resume||{};
   if(r.url){
     openSafeUrl(r.url);
   } else {
-    showToast("No resume yet. Login admin â†’ Resume to upload.","info");
+    showToast("No resume yet. Login admin -> Resume to upload.","info");
   }
 }
 
@@ -814,9 +1064,7 @@ if(rdz){
   });
 }
 
-/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-   ADMIN LISTS
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+/* ADMIN LISTS */
 const TK={education:'education',skill:'skills',project:'projects',experience:'experience',certificate:'certificates',gallery:'gallery',activity:'activities',language:'languages',hobby:'hobbies',blog:'blog',social:'social'};
 function nid(arr){return arr&&arr.length?Math.max(...arr.map(i=>i.id||0))+1:1;}
 function delItem(tp,id){if(!confirm('Delete?'))return;const k=TK[tp];D[k]=(D[k]||[]).filter(i=>i.id!==id);saveData();renderAdminAll();}
@@ -826,10 +1074,10 @@ function renderAdminAll(){
   rAEdu();rASkills();rAProj();rAExp();rACerts();rAGallery();rAActs();rALangs();rAHobbies();rABlog();rASocial();rAVis();
 }
 
-function rAEdu(){document.getElementById('aEdu').innerHTML=(D.education||[]).map(e=>`<div class="ac"><div class="ac-hd"><div><div class="ac-title">${e.icon||'ðŸŽ“'} ${e.degree}</div><div class="ac-sub">${e.inst||''} Â· ${e.year||''} Â· ${e.grade||''}</div></div><div class="ac-actions"><button class="ico-btn edit" onclick="editItem('education',${e.id})"><i class="fas fa-pen"></i></button><button class="ico-btn del" onclick="delItem('education',${e.id})"><i class="fas fa-trash"></i></button></div></div></div>`).join('');}
+function rAEdu(){document.getElementById('aEdu').innerHTML=(D.education||[]).map(e=>`<div class="ac"><div class="ac-hd"><div><div class="ac-title">${e.icon||'Grad'} ${e.degree}</div><div class="ac-sub">${e.inst||''} | ${e.year||''} | ${e.grade||''}</div></div><div class="ac-actions"><button class="ico-btn edit" onclick="editItem('education',${e.id})"><i class="fas fa-pen"></i></button><button class="ico-btn del" onclick="delItem('education',${e.id})"><i class="fas fa-trash"></i></button></div></div></div>`).join('');}
 function rASkills(){const cats=[...new Set((D.skills||[]).map(s=>s.category))];document.getElementById('aSkills').innerHTML=cats.map(cat=>`<div class="ac"><div class="ac-title" style="margin-bottom:10px">${cat}</div>${(D.skills||[]).filter(s=>s.category===cat).map(s=>`<div class="chip-row"><div class="chip-left">${s.icon||''} ${s.name}</div><div class="ac-actions"><button class="ico-btn edit" onclick="editItem('skill',${s.id})"><i class="fas fa-pen"></i></button><button class="ico-btn del" onclick="delItem('skill',${s.id})"><i class="fas fa-trash"></i></button></div></div>`).join('')}</div>`).join('');}
-function rAProj(){document.getElementById('aProjects').innerHTML=(D.projects||[]).map(p=>`<div class="ac"><div class="ac-hd"><div><div class="ac-title">ðŸš€ ${p.name}</div><div class="ac-sub">${(p.tags||[]).join(' Â· ')}</div></div><div class="ac-actions"><button class="ico-btn edit" onclick="editItem('project',${p.id})"><i class="fas fa-pen"></i></button><button class="ico-btn del" onclick="delItem('project',${p.id})"><i class="fas fa-trash"></i></button></div></div></div>`).join('');}
-function rAExp(){document.getElementById('aExp').innerHTML=(D.experience||[]).map(e=>`<div class="ac"><div class="ac-hd"><div><div class="ac-title">ðŸ’¼ ${e.role}</div><div class="ac-sub">${e.company||''} Â· ${e.period||''} Â· ${e.type||''}</div></div><div class="ac-actions"><button class="ico-btn edit" onclick="editItem('experience',${e.id})"><i class="fas fa-pen"></i></button><button class="ico-btn del" onclick="delItem('experience',${e.id})"><i class="fas fa-trash"></i></button></div></div></div>`).join('');}
+function rAProj(){document.getElementById('aProjects').innerHTML=(D.projects||[]).map(p=>`<div class="ac"><div class="ac-hd"><div><div class="ac-title">PROJECT ${p.name}</div><div class="ac-sub">${(p.tags||[]).join(' | ')}</div></div><div class="ac-actions"><button class="ico-btn edit" onclick="editItem('project',${p.id})"><i class="fas fa-pen"></i></button><button class="ico-btn del" onclick="delItem('project',${p.id})"><i class="fas fa-trash"></i></button></div></div></div>`).join('');}
+function rAExp(){document.getElementById('aExp').innerHTML=(D.experience||[]).map(e=>`<div class="ac"><div class="ac-hd"><div><div class="ac-title">ROLE ${e.role}</div><div class="ac-sub">${e.company||''} | ${e.period||''} | ${e.type||''}</div></div><div class="ac-actions"><button class="ico-btn edit" onclick="editItem('experience',${e.id})"><i class="fas fa-pen"></i></button><button class="ico-btn del" onclick="delItem('experience',${e.id})"><i class="fas fa-trash"></i></button></div></div></div>`).join('');}
 
 function rACerts(){
   document.getElementById('aCerts').innerHTML=(D.certificates||[]).map(c=>{
@@ -837,8 +1085,8 @@ function rACerts(){
     const type=inferMediaType(c.media,c.mediaType);
     return `<div class="ac"><div class="ac-hd">
       <div style="display:flex;align-items:center;gap:12px;flex:1">
-        ${hasMedia?`<div style="width:52px;height:40px;border-radius:6px;overflow:hidden;cursor:pointer" onclick="openLB('${c.media}','${type}')" title="Click to preview">${mediaTag(c.media,type,'width:100%;height:100%;object-fit:cover')}</div>`:'<div style="width:52px;height:40px;background:var(--surf);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:20px">ðŸ†</div>'}
-        <div><div class="ac-title">${c.name}</div><div class="ac-sub">${c.issuer||''} Â· ${c.date||''}${hasMedia?' Â· ðŸ“Ž Media':''}${c.liLink?' Â· ðŸ”— LinkedIn':''}</div></div>
+        ${hasMedia?`<div style="width:52px;height:40px;border-radius:6px;overflow:hidden;cursor:pointer" onclick="openLB('${c.media}','${type}')" title="Click to preview">${mediaTag(c.media,type,'width:100%;height:100%;object-fit:cover')}</div>`:'<div style="width:52px;height:40px;background:var(--surf);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:20px">CERT</div>'}
+        <div><div class="ac-title">${c.name}</div><div class="ac-sub">${c.issuer||''} | ${c.date||''}${hasMedia?' | Media':''}${c.liLink?' | LinkedIn':''}</div></div>
       </div>
       <div class="ac-actions"><button class="ico-btn edit" onclick="editItem('certificate',${c.id})"><i class="fas fa-pen"></i></button><button class="ico-btn del" onclick="delItem('certificate',${c.id})"><i class="fas fa-trash"></i></button></div>
     </div></div>`;
@@ -852,7 +1100,7 @@ function rAGallery(){
     const type=inferMediaType(g.media,g.mediaType);
     return`<div class="ac"><div class="ac-hd">
       <div style="display:flex;align-items:center;gap:12px;flex:1">
-        ${hasMedia?`<div style="width:60px;height:44px;border-radius:6px;overflow:hidden;flex-shrink:0;cursor:pointer" onclick="openLB('${g.media}','${type}')">${mediaTag(g.media,type,'width:100%;height:100%;object-fit:cover')}</div>`:'<div style="width:60px;height:44px;background:var(--surf);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:22px">ðŸ–¼ï¸</div>'}
+        ${hasMedia?`<div style="width:60px;height:44px;border-radius:6px;overflow:hidden;flex-shrink:0;cursor:pointer" onclick="openLB('${g.media}','${type}')">${mediaTag(g.media,type,'width:100%;height:100%;object-fit:cover')}</div>`:'<div style="width:60px;height:44px;background:var(--surf);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:22px">IMG</div>'}
         <div><div class="ac-title">${g.caption||'Gallery Item'}</div><div class="ac-sub">${g.mediaType||'No media'}</div></div>
       </div>
       <div class="ac-actions"><button class="ico-btn edit" onclick="editItem('gallery',${g.id})"><i class="fas fa-pen"></i></button><button class="ico-btn del" onclick="delItem('gallery',${g.id})"><i class="fas fa-trash"></i></button></div>
@@ -861,19 +1109,26 @@ function rAGallery(){
 }
 
 function rAActs(){
-  document.getElementById('aActs').innerHTML=(D.activities||[]).map(a=>`<div class="ac"><div class="ac-hd"><div><div class="ac-title">${a.type==='linkedin'?'ðŸ”—':'â­'} ${a.title||'Activity'}</div><div class="ac-sub">${a.type==='linkedin'?'LinkedIn Post':'GitHub Repo'} Â· ${a.date||''}</div></div><div class="ac-actions"><button class="ico-btn edit" onclick="editItem('activity',${a.id})"><i class="fas fa-pen"></i></button><button class="ico-btn del" onclick="delItem('activity',${a.id})"><i class="fas fa-trash"></i></button></div></div></div>`).join('');
+  document.getElementById('aActs').innerHTML=(D.activities||[]).map(a=>`<div class="ac"><div class="ac-hd"><div><div class="ac-title">${a.type==='linkedin'?'LINK':'STAR'} ${a.title||'Activity'}</div><div class="ac-sub">${a.type==='linkedin'?'LinkedIn Post':'GitHub Repo'} | ${a.date||''}</div></div><div class="ac-actions"><button class="ico-btn edit" onclick="editItem('activity',${a.id})"><i class="fas fa-pen"></i></button><button class="ico-btn del" onclick="delItem('activity',${a.id})"><i class="fas fa-trash"></i></button></div></div></div>`).join('');
 }
-function rALangs(){document.getElementById('aLangs').innerHTML=(D.languages||[]).map(l=>`<div class="chip-row"><div class="chip-left">${l.flag||'ðŸŒ'} ${l.name} â€” <span style="color:var(--text3)">${l.level||''}</span></div><div class="ac-actions"><button class="ico-btn edit" onclick="editItem('language',${l.id})"><i class="fas fa-pen"></i></button><button class="ico-btn del" onclick="delItem('language',${l.id})"><i class="fas fa-trash"></i></button></div></div>`).join('');}
-function rAHobbies(){document.getElementById('aHobbies').innerHTML=(D.hobbies||[]).map(h=>`<div class="chip-row"><div class="chip-left">${h.icon||'â­'} ${h.name}</div><div class="ac-actions"><button class="ico-btn edit" onclick="editItem('hobby',${h.id})"><i class="fas fa-pen"></i></button><button class="ico-btn del" onclick="delItem('hobby',${h.id})"><i class="fas fa-trash"></i></button></div></div>`).join('');}
-function rABlog(){const items=D.blog||[];document.getElementById('aBlog').innerHTML=items.length?items.map(b=>`<div class="ac"><div class="ac-hd"><div><div class="ac-title">ðŸ“ ${b.title||'Post'}</div><div class="ac-sub">${b.tag||''} Â· ${b.date||''}</div></div><div class="ac-actions"><button class="ico-btn edit" onclick="editItem('blog',${b.id})"><i class="fas fa-pen"></i></button><button class="ico-btn del" onclick="delItem('blog',${b.id})"><i class="fas fa-trash"></i></button></div></div></div>`).join(''):`<p style="color:var(--text3)">No blog posts yet.</p>`;}
+function rALangs(){document.getElementById('aLangs').innerHTML=(D.languages||[]).map(l=>`<div class="chip-row"><div class="chip-left">${l.flag||'LANG'} ${l.name} - <span style="color:var(--text3)">${l.level||''}</span></div><div class="ac-actions"><button class="ico-btn edit" onclick="editItem('language',${l.id})"><i class="fas fa-pen"></i></button><button class="ico-btn del" onclick="delItem('language',${l.id})"><i class="fas fa-trash"></i></button></div></div>`).join('');}
+function rAHobbies(){document.getElementById('aHobbies').innerHTML=(D.hobbies||[]).map(h=>`<div class="chip-row"><div class="chip-left">${h.icon||'HOBBY'} ${h.name}</div><div class="ac-actions"><button class="ico-btn edit" onclick="editItem('hobby',${h.id})"><i class="fas fa-pen"></i></button><button class="ico-btn del" onclick="delItem('hobby',${h.id})"><i class="fas fa-trash"></i></button></div></div>`).join('');}
+function rABlog(){const items=D.blog||[];document.getElementById('aBlog').innerHTML=items.length?items.map(b=>`<div class="ac"><div class="ac-hd"><div><div class="ac-title">POST ${b.title||'Post'}</div><div class="ac-sub">${b.tag||''} | ${b.date||''}</div></div><div class="ac-actions"><button class="ico-btn edit" onclick="editItem('blog',${b.id})"><i class="fas fa-pen"></i></button><button class="ico-btn del" onclick="delItem('blog',${b.id})"><i class="fas fa-trash"></i></button></div></div></div>`).join(''):`<p style="color:var(--text3)">No blog posts yet.</p>`;}
 function rASocial(){document.getElementById('aSocial').innerHTML=(D.social||[]).map(s=>`<div class="chip-row"><div class="chip-left" style="color:${s.color}"><div style="width:28px;height:28px;border-radius:6px;background:${s.color}18;display:flex;align-items:center;justify-content:center"><i class="${s.icon}"></i></div><div><div style="font-weight:700;font-size:13px">${s.name}</div><div style="color:var(--text3);font-size:12px">${s.handle||''}</div></div></div><div class="ac-actions"><button class="ico-btn edit" onclick="editItem('social',${s.id})"><i class="fas fa-pen"></i></button><button class="ico-btn del" onclick="delItem('social',${s.id})"><i class="fas fa-trash"></i></button></div></div>`).join('');}
 
 function rAVis(){
   const v=D.visibility||{};
-  const rows=[['hero','ðŸ  Hero'],['about','ðŸ‘¤ About'],['education','ðŸŽ“ Education'],['skills','ðŸ’» Skills'],['projects','ðŸš€ Projects'],['experience','ðŸ’¼ Experience'],['certificates','ðŸ† Certificates'],['gallery','ðŸ–¼ï¸ Gallery'],['activities','âš¡ Activities'],['languages','ðŸŒ Languages'],['hobbies','â¤ï¸ Hobbies'],['blog','ðŸ“ Blog'],['contact','ðŸ“ž Contact']];
+  const rows=[['hero','Hero'],['about','About'],['education','Education'],['skills','Skills'],['projects','Projects'],['experience','Experience'],['certificates','Certificates'],['gallery','Gallery'],['activities','Activities'],['languages','Languages'],['hobbies','Hobbies'],['blog','Blog'],['contact','Contact']];
   document.getElementById('visGrid').innerHTML=rows.map(([k,l])=>`<div class="vis-row"><span style="font-size:15px">${l}</span><label class="toggle"><input type="checkbox" ${v[k]!==false?'checked':''} onchange="toggleVis('${k}',this.checked)"><span class="toggle-slider"></span></label></div>`).join('');
+  updateVisibilitySaveState(_visibilityDirty?'Unsaved visibility changes. Save to keep them after reload.':'No pending changes.');
 }
-function toggleVis(k,v){if(!D.visibility)D.visibility={};D.visibility[k]=v;saveData(true);applyVis();}
+function toggleVis(k,v){
+  if(!D.visibility)D.visibility={};
+  D.visibility[k]=v;
+  markVisibilityDirty();
+  renderNav();
+  applyVis();
+}
 
 async function saveGHConfig(){
   if(!acquireLock('gh-config')) return;
@@ -883,9 +1138,9 @@ async function saveGHConfig(){
   D.github.user=document.getElementById('ghUser').value.trim();
   D.github.repo=document.getElementById('ghRepo').value.trim();
   D.github.branch=document.getElementById('ghBranch').value.trim()||'main';
-  D.github.token=tok==='â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢'?(D.github.token||''):tok;
+  D.github.token=tok==='**********'?(D.github.token||''):tok;
   await saveData(true);
-  document.getElementById('ghConfigStatus').textContent='âœ… Config saved locally.';
+  document.getElementById('ghConfigStatus').textContent='Config saved locally.';
   showToast("GitHub config saved!","success");
   setBusyState(btn, false);
   releaseLock('gh-config');
@@ -912,43 +1167,137 @@ async function syncGH(){
     const body={message:`Portfolio update ${new Date().toISOString()}`,content,branch:gh.branch||'main'};
     if(sha) body.sha=sha;
     const res=await fetch(apiBase,{method:'PUT',headers,body:JSON.stringify(body)});
-    if(res.ok){dot.className='sync-dot ok';txt.textContent='Synced '+new Date().toLocaleTimeString();showToast("âœ… Synced to GitHub!","success");}
+    if(res.ok){dot.className='sync-dot ok';txt.textContent='Synced '+new Date().toLocaleTimeString();showToast("Synced to GitHub!","success");}
     else{const err=await res.json();throw new Error(err.message);}
   }catch(e){dot.className='sync-dot err';txt.textContent='Sync failed';showToast("Sync failed: "+e.message,"error");}
   setButtonsBusy('.adm-btn.sync-gh, #tab-github .btn-save2', false);
   releaseLock('gh-sync');
 }
 
-/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-   MODALS
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+/* MODALS */
 const SK=['Frontend','Backend','Languages','Mobile','ML / AI','Tools','Database','DevOps','Design','Other'];
 const XT=['Internship','Full-time','Part-time','Freelance','Academic','Achievement','Volunteer','Other'];
 const LL=['Native','Fluent','Professional','Conversational','Beginner'];
 const BT=['Tech','Tutorial','Project','Career','Life','Opinion','Other'];
-const SP=[{n:'LinkedIn',i:'fab fa-linkedin',c:'#0077b5'},{n:'GitHub',i:'fab fa-github',c:'#7c5cbf'},{n:'Instagram',i:'fab fa-instagram',c:'#e1306c'},{n:'WhatsApp',i:'fab fa-whatsapp',c:'#25d366'},{n:'Twitter/X',i:'fab fa-twitter',c:'#1da1f2'},{n:'YouTube',i:'fab fa-youtube',c:'#ff0000'},{n:'Portfolio',i:'fas fa-globe',c:'#00e5c8'},{n:'Email',i:'fas fa-envelope',c:'#ea4335'},{n:'Other',i:'fas fa-link',c:'#6b8aaa'}];
-const EMOJIS=['ðŸ’»','ðŸŒ','âš›ï¸','ðŸŸ¢','ðŸ“±','ðŸ¤–','ðŸ”§','âš™ï¸','ðŸŽ¨','ðŸ—„ï¸','â˜•','ðŸ','ðŸ†','ðŸŽ“','ðŸš€','â­','â¤ï¸','ðŸŽ®','ðŸŽµ','ðŸ“–','ðŸ‹ï¸','ðŸŒ','ðŸ•','ðŸ“Š','ðŸ”¬','ðŸ’¡','ðŸ› ï¸','ðŸ”','ðŸ“¦','ðŸŽ¯','ðŸ…','ðŸ“œ','ðŸŒŸ','ðŸ’Ž','ðŸ”‘','ðŸŽ¸','âš½','ðŸ€','âœˆï¸','ðŸŒˆ','ðŸ¦','ðŸ¬','ðŸŒº','ðŸ€','ðŸ”¥','â„ï¸','âš¡','ðŸŒ™','ðŸŽ­','ðŸ—ï¸'];
-const FLAGS=['ðŸ‡¬ðŸ‡§','ðŸ‡®ðŸ‡³','ðŸ‡ºðŸ‡¸','ðŸ‡«ðŸ‡·','ðŸ‡©ðŸ‡ª','ðŸ‡¯ðŸ‡µ','ðŸ‡¨ðŸ‡³','ðŸ‡§ðŸ‡·','ðŸ‡ªðŸ‡¸','ðŸ‡·ðŸ‡º','ðŸ‡¦ðŸ‡º','ðŸ‡¨ðŸ‡¦','ðŸ‡°ðŸ‡·','ðŸŒ','ðŸ—£ï¸'];
+const SP=[{n:'LinkedIn',i:'fab fa-linkedin',c:'#0077b5'},{n:'GitHub',i:'fab fa-github',c:'#ff5ea8'},{n:'Instagram',i:'fab fa-instagram',c:'#e1306c'},{n:'WhatsApp',i:'fab fa-whatsapp',c:'#25d366'},{n:'Twitter/X',i:'fab fa-twitter',c:'#1da1f2'},{n:'YouTube',i:'fab fa-youtube',c:'#ff0000'},{n:'Portfolio',i:'fas fa-globe',c:'#b084ff'},{n:'Email',i:'fas fa-envelope',c:'#ea4335'},{n:'Other',i:'fas fa-link',c:'#6b8aaa'}];
+const EMOJIS=['DEV','WEB','CODE','APP','ML','DATA','TOOLS','STAR','IDE','READ','PLAY','MUSIC','FIT','TRAVEL','COOK','LOCK','CERT','POST','LINK','LIGHT'];
+const FLAGS=['EN','IN','US','FR','DE','JP','CN','BR','ES','RU','AU','CA','KR','LANG','VOICE'];
 
 function epick(tid){return`<div class="epick">${EMOJIS.map(e=>`<button class="epick-btn" type="button" onclick="gi('${tid}').value='${e}'">${e}</button>`).join('')}</div>`;}
 function fpick(tid){return`<div class="epick">${FLAGS.map(e=>`<button class="epick-btn" type="button" onclick="gi('${tid}').value='${e}'">${e}</button>`).join('')}</div>`;}
 
+function renderMediaFieldPreview(mId,tId,iId,vId,pId,sourceLabel=''){
+  const src=gi(mId).value.trim();
+  const type=src?(gi(tId).value || inferMediaType(src,'')):'';
+  const img=document.getElementById(iId);
+  const vid=document.getElementById(vId);
+  const pdf=document.getElementById(pId);
+  const empty=document.getElementById(`empty_${mId}`);
+  const meta=document.getElementById(`meta_${mId}`);
+  const openBtn=document.getElementById(`open_${mId}`);
+  const clearBtn=document.getElementById(`clear_${mId}`);
+  const safe=safeMediaSrc(src);
+
+  if(img){img.style.display='none';img.removeAttribute('src');}
+  if(vid){vid.style.display='none';vid.pause();vid.removeAttribute('src');vid.load();}
+  if(pdf){pdf.style.display='none';pdf.removeAttribute('src');}
+  if(openBtn) openBtn.disabled=!safe;
+  if(clearBtn) clearBtn.disabled=!src;
+
+  if(!src){
+    if(empty){empty.style.display='flex';empty.innerHTML='<span>Preview</span><small>Upload a file or paste a PDF, image, or video link.</small>';}
+    if(meta) meta.textContent='No media selected yet.';
+    return;
+  }
+
+  if(!safe){
+    if(empty){empty.style.display='flex';empty.innerHTML='<span>Invalid</span><small>Enter a valid media URL.</small>';}
+    if(meta) meta.textContent='Preview unavailable until the link is valid.';
+    return;
+  }
+
+  if(empty) empty.style.display='none';
+  if(meta) meta.textContent=sourceLabel || `${type.toUpperCase()} preview ready.`;
+
+  if(type==='video' && vid){
+    vid.src=safe;
+    vid.style.display='block';
+    return;
+  }
+  if(type==='pdf' && pdf){
+    pdf.src=safe;
+    pdf.style.display='block';
+    return;
+  }
+  if(img){
+    img.src=safe;
+    img.style.display='block';
+  }
+}
+
+function setMediaFieldValue(mId,tId,iId,vId,pId,src,explicitType='',sourceLabel=''){
+  const clean=String(src||'').trim();
+  gi(mId).value=clean;
+  gi(tId).value=clean?inferMediaType(clean, explicitType):'';
+  const urlInput=document.getElementById(`${mId}_url`);
+  if(urlInput && urlInput.value!==clean) urlInput.value=clean;
+  renderMediaFieldPreview(mId,tId,iId,vId,pId,sourceLabel);
+}
+
+function handleMediaUrlInput(input,mId,tId,iId,vId,pId){
+  setMediaFieldValue(mId,tId,iId,vId,pId,input.value,gi(tId).value,'Previewing linked media. Save to keep it.');
+}
+
+function clearMediaValue(mId,tId,iId,vId,pId){
+  setMediaFieldValue(mId,tId,iId,vId,pId,'','','Media cleared.');
+}
+
+function openMediaPreviewFromField(mId,tId){
+  const src=gi(mId).value.trim();
+  if(!src){showToast('No media selected yet.','info');return;}
+  openLB(src, gi(tId).value || inferMediaType(src,''));
+}
+
+function initModalMediaPreviews(){
+  document.querySelectorAll('[data-media-block]').forEach(block=>{
+    renderMediaFieldPreview(
+      block.dataset.mediaBlock,
+      block.dataset.typeId,
+      block.dataset.imageId,
+      block.dataset.videoId,
+      block.dataset.pdfId,
+      'Showing saved media.'
+    );
+  });
+}
+
 function uploadBlock(mId,tId,iId,vId,pId,ex){
-  const hasImg=ex?.media&&ex?.mediaType!=='video'&&ex?.mediaType!=='pdf';
-  const hasVid=ex?.media&&ex?.mediaType==='video';
-  const hasPdf=ex?.media&&(ex?.mediaType==='pdf'||ex?.media?.startsWith('data:application/pdf'));
+  const mediaSrc=ex?.media||'';
   return`
-    <div class="drop-zone" id="dz_${mId}">
-      <input type="file" accept="image/*,video/*,application/pdf" onchange="handleUpload(this,'${mId}','${tId}','${iId}','${vId}','${pId}')">
-      <div class="drop-ico"><i class="fas fa-cloud-upload-alt"></i></div>
-      <div class="drop-txt">Click or drag & drop<small>Image, Video, or PDF</small></div>
+    <div class="media-input-stack" data-media-block="${mId}" data-type-id="${tId}" data-image-id="${iId}" data-video-id="${vId}" data-pdf-id="${pId}">
+      <div class="drop-zone" id="dz_${mId}">
+        <input type="file" accept="image/*,video/*,application/pdf" onchange="handleUpload(this,'${mId}','${tId}','${iId}','${vId}','${pId}')">
+        <div class="drop-ico"><i class="fas fa-cloud-upload-alt"></i></div>
+        <div class="drop-txt">Click or drag & drop<small>Image, Video, or PDF</small></div>
+      </div>
+      <div class="media-link-row">
+        <input class="fi" id="${mId}_url" placeholder="Paste PDF, image, or video URL" value="${esc(mediaSrc)}" oninput="handleMediaUrlInput(this,'${mId}','${tId}','${iId}','${vId}','${pId}')">
+        <button type="button" class="media-mini-btn" id="open_${mId}" onclick="openMediaPreviewFromField('${mId}','${tId}')">Open</button>
+        <button type="button" class="media-mini-btn danger" id="clear_${mId}" onclick="clearMediaValue('${mId}','${tId}','${iId}','${vId}','${pId}')">Clear</button>
+      </div>
     </div>
     <div class="upload-err" id="uerr_${mId}"></div>
-    <img id="${iId}" class="upload-preview" alt="Preview" ${hasImg&&ex.media.length>10?`src="${ex.media}" style="display:block"`:''}>
-    <video id="${vId}" class="upload-vid-preview" controls ${hasVid&&ex.media.length>10?`src="${ex.media}" style="display:block"`:''}>
-    <iframe id="${pId}" class="upload-pdf-preview" ${hasPdf?`src="${ex.media}" style="display:block"`:''}></iframe>
-    <input type="hidden" id="${mId}" value="${ex?.media||''}">
-    <input type="hidden" id="${tId}" value="${ex?.mediaType||''}">`;
+    <div class="media-preview-card" id="wrap_${mId}">
+      <div class="media-preview-stage">
+        <div class="media-preview-empty" id="empty_${mId}"><span>Preview</span><small>Upload a file or paste a media link.</small></div>
+        <img id="${iId}" class="upload-preview" alt="Preview">
+        <video id="${vId}" class="upload-vid-preview" controls></video>
+        <iframe id="${pId}" class="upload-pdf-preview" sandbox="allow-scripts allow-same-origin"></iframe>
+      </div>
+      <div class="media-preview-meta" id="meta_${mId}">No media selected yet.</div>
+    </div>
+    <input type="hidden" id="${mId}" value="${esc(mediaSrc)}">
+    <input type="hidden" id="${tId}" value="${esc(mediaSrc?inferMediaType(mediaSrc, ex?.mediaType||''):'')}">`;
 }
 
 async function handleUpload(inp,mId,tId,iId,vId,pId){
@@ -961,23 +1310,15 @@ async function handleUpload(inp,mId,tId,iId,vId,pId){
   if(dz) dz.classList.add('is-busy');
   inp.disabled = true;
   errEl.style.display='none';
-  if(f.size>20*1024*1024){errEl.textContent='âŒ File too large (max 20MB)';errEl.style.display='block';showToast("File too large","error");if(dz) dz.classList.remove('is-busy');inp.disabled=false;releaseLock(lockKey);return;}
+  if(f.size>20*1024*1024){errEl.textContent='File too large (max 20MB)';errEl.style.display='block';showToast("File too large","error");if(dz) dz.classList.remove('is-busy');inp.disabled=false;releaseLock(lockKey);return;}
   const isVid=f.type.startsWith('video/');
   const isPdf=f.type==='application/pdf';
   showToast("Uploading...","info");
   try{
     const src=await supaUpload('uploads/'+mId+'_'+Date.now()+'_'+f.name, f);
-    gi(mId).value=src;
-    gi(tId).value=isVid?'video':isPdf?'pdf':'image';
-    const img=document.getElementById(iId);
-    const vid=document.getElementById(vId);
-    const pdf=document.getElementById(pId);
-    img.style.display='none';vid.style.display='none';pdf.style.display='none';
-    if(isVid){vid.src=src;vid.style.display='block';}
-    else if(isPdf){pdf.src=src;pdf.style.display='block';}
-    else{img.src=src;img.style.display='block';}
+    setMediaFieldValue(mId,tId,iId,vId,pId,src,isVid?'video':isPdf?'pdf':'image','Uploaded file ready. Save to apply it.');
     showToast("Uploaded! Click Save to apply.","success");
-  }catch(e){errEl.textContent='âŒ Upload failed: '+e.message;errEl.style.display='block';showToast("Upload failed","error");}
+  }catch(e){errEl.textContent='Upload failed: '+e.message;errEl.style.display='block';showToast("Upload failed","error");}
   if(dz) dz.classList.remove('is-busy');
   inp.disabled = false;
   releaseLock(lockKey);
@@ -987,18 +1328,18 @@ function openModal(tp,ex=null){
   _eid=ex?ex.id:null;_etyp=tp;
   const act=ex?'Edit':'Add';
   const titles={education:'Education',skill:'Skill',project:'Project',experience:'Experience',certificate:'Certificate',gallery:'Gallery Item',activity:'Activity',language:'Language',hobby:'Hobby',blog:'Blog Post',social:'Social Media'};
-  document.getElementById('modalHd').innerHTML=`${act} ${titles[tp]} <button class="modal-close-btn" onclick="closeModal()">âœ•</button>`;
+  document.getElementById('modalHd').innerHTML=`${act} ${titles[tp]} <button class="modal-close-btn" onclick="closeModal()">&times;</button>`;
 
   const forms={
     education:`
-      <div class="fg"><label class="fl">Icon Emoji</label><input class="fi" id="mEi" value="${ex?.icon||'ðŸŽ“'}" style="width:70px">${epick('mEi')}</div>
+      <div class="fg"><label class="fl">Icon Label</label><input class="fi" id="mEi" value="${ex?.icon||'Grad'}" style="width:70px">${epick('mEi')}</div>
       <div class="fg"><label class="fl">Degree / Course</label><input class="fi" id="mEd" value="${ex?.degree||''}"></div>
       <div class="fg"><label class="fl">Institution</label><input class="fi" id="mEin" value="${ex?.inst||''}"></div>
       <div class="fr2">
         <div class="fg"><label class="fl">Year</label><input class="fi" id="mEy" value="${ex?.year||''}"></div>
         <div class="fg"><label class="fl">Grade / CGPA</label><input class="fi" id="mEg" value="${ex?.grade||''}"></div>
       </div>
-      <button class="btn-save" onclick="saveM()">ðŸ’¾ Save</button>`,
+      <button class="btn-save" onclick="saveM()">Save</button>`,
 
     skill:`
       <div class="fg"><label class="fl">Category</label>
@@ -1009,8 +1350,8 @@ function openModal(tp,ex=null){
         </div>
       </div>
       <div class="fg"><label class="fl">Skill Name</label><input class="fi" id="mSn" value="${ex?.name||''}"></div>
-      <div class="fg"><label class="fl">Icon Emoji</label><input class="fi" id="mSi" value="${ex?.icon||'ðŸ’¡'}" style="width:70px">${epick('mSi')}</div>
-      <button class="btn-save" onclick="saveM()">ðŸ’¾ Save</button>`,
+      <div class="fg"><label class="fl">Icon Label</label><input class="fi" id="mSi" value="${ex?.icon||'SKILL'}" style="width:70px">${epick('mSi')}</div>
+      <button class="btn-save" onclick="saveM()">Save</button>`,
 
     project:`
       <div class="fg"><label class="fl">Project Name</label><input class="fi" id="mPn" value="${ex?.name||''}"></div>
@@ -1020,8 +1361,8 @@ function openModal(tp,ex=null){
         <div class="fg"><label class="fl">GitHub URL</label><input class="fi" id="mPg" value="${ex?.github||''}"></div>
         <div class="fg"><label class="fl">Demo URL</label><input class="fi" id="mPdm" value="${ex?.demo||''}"></div>
       </div>
-      <div class="fg"><label class="fl">Thumbnail (Image/Video)</label>${uploadBlock('mPmed','mPmt','mPimg','mPvid','mPpdf',ex)}</div>
-      <button class="btn-save" onclick="saveM()">ðŸ’¾ Save</button>`,
+      <div class="fg"><label class="fl">Project Media (Image / Video / PDF link or upload)</label>${uploadBlock('mPmed','mPmt','mPimg','mPvid','mPpdf',ex)}</div>
+      <button class="btn-save" onclick="saveM()">Save</button>`,
 
     experience:`
       <div class="fg"><label class="fl">Role / Position</label><input class="fi" id="mXr" value="${ex?.role||''}"></div>
@@ -1037,7 +1378,7 @@ function openModal(tp,ex=null){
         </div>
       </div>
       <div class="fg"><label class="fl">Description</label><textarea class="ft" id="mXd">${ex?.desc||''}</textarea></div>
-      <button class="btn-save" onclick="saveM()">ðŸ’¾ Save</button>`,
+      <button class="btn-save" onclick="saveM()">Save</button>`,
 
     certificate:`
       <div class="fg"><label class="fl">Certificate Name</label><input class="fi" id="mCn" value="${ex?.name||''}"></div>
@@ -1047,17 +1388,17 @@ function openModal(tp,ex=null){
       </div>
       <div class="fg"><label class="fl">Verification URL (optional)</label><input class="fi" id="mCl" value="${ex?.link||''}"></div>
       <div class="fg"><label class="fl">LinkedIn Post URL (optional)</label><input class="fi" id="mCll" placeholder="https://www.linkedin.com/posts/..." value="${ex?.liLink||''}"></div>
-      <div class="fg"><label class="fl">Upload Certificate (Image / PDF / Video)</label>${uploadBlock('mCmed','mCmt','mCimg','mCvid','mCpdf',ex)}</div>
-      <button class="btn-save" onclick="saveM()">ðŸ’¾ Save</button>`,
+      <div class="fg"><label class="fl">Certificate Media (Image / PDF / Video link or upload)</label>${uploadBlock('mCmed','mCmt','mCimg','mCvid','mCpdf',ex)}</div>
+      <button class="btn-save" onclick="saveM()">Save</button>`,
 
     gallery:`
       <div class="fg"><label class="fl">Caption (optional)</label><input class="fi" id="mGc" value="${ex?.caption||''}"></div>
-      <div class="fg"><label class="fl">Upload Image or Video</label>${uploadBlock('mGmed','mGmt','mGimg','mGvid','mGpdf',ex)}</div>
-      <button class="btn-save" onclick="saveM()">ðŸ’¾ Save</button>`,
+      <div class="fg"><label class="fl">Gallery Media (Image / PDF / Video link or upload)</label>${uploadBlock('mGmed','mGmt','mGimg','mGvid','mGpdf',ex)}</div>
+      <button class="btn-save" onclick="saveM()">Save</button>`,
 
     activity:`
       <div class="fg"><label class="fl">Activity Type</label>
-        <div class="ctabs">${[['github','â­ GitHub Repository'],['linkedin','ðŸ”— LinkedIn Post']].map(([v,l])=>`<button type="button" class="ctab${ex?.type===v?' active':''}" onclick="pickCat(this,'mAtype','${v}')">${l}</button>`).join('')}</div>
+        <div class="ctabs">${[['github','GitHub Repository'],['linkedin','LinkedIn Post']].map(([v,l])=>`<button type="button" class="ctab${ex?.type===v?' active':''}" onclick="pickCat(this,'mAtype','${v}')">${l}</button>`).join('')}</div>
         <input type="hidden" id="mAtype" value="${ex?.type||'github'}">
       </div>
       <div class="fg"><label class="fl">Title</label><input class="fi" id="mAt" value="${ex?.title||''}"></div>
@@ -1071,10 +1412,10 @@ function openModal(tp,ex=null){
         <div class="fg"><label class="fl">Stars (GitHub)</label><input class="fi" id="mAstars" value="${ex?.stars||''}"></div>
         <div class="fg"><label class="fl">Likes (LinkedIn)</label><input class="fi" id="mAlikes" value="${ex?.likes||''}"></div>
       </div>
-      <button class="btn-save" onclick="saveM()">ðŸ’¾ Save</button>`,
+      <button class="btn-save" onclick="saveM()">Save</button>`,
 
     language:`
-      <div class="fg"><label class="fl">Flag Emoji</label><input class="fi" id="mLf" value="${ex?.flag||'ðŸŒ'}" style="width:70px">${fpick('mLf')}</div>
+      <div class="fg"><label class="fl">Flag Label</label><input class="fi" id="mLf" value="${ex?.flag||'EN'}" style="width:70px">${fpick('mLf')}</div>
       <div class="fg"><label class="fl">Language Name</label><input class="fi" id="mLn" value="${ex?.name||''}"></div>
       <div class="fg"><label class="fl">Proficiency Level</label>
         <select class="fs" id="mLlsel" onchange="gi('mLl').value=this.value;document.getElementById('mLlOtherWrap').style.display=this.value==='Other'?'block':'none'">
@@ -1083,12 +1424,12 @@ function openModal(tp,ex=null){
         <input type="hidden" id="mLl" value="${ex?.level||LL[0]}">
         <div id="mLlOtherWrap" style="display:none" class="fg"><label class="fl">Custom Level</label><input class="fi" id="mLlOther"></div>
       </div>
-      <button class="btn-save" onclick="saveM()">ðŸ’¾ Save</button>`,
+      <button class="btn-save" onclick="saveM()">Save</button>`,
 
     hobby:`
-      <div class="fg"><label class="fl">Icon Emoji</label><input class="fi" id="mHi" value="${ex?.icon||'â­'}" style="width:70px">${epick('mHi')}</div>
+      <div class="fg"><label class="fl">Icon Label</label><input class="fi" id="mHi" value="${ex?.icon||'HOBBY'}" style="width:70px">${epick('mHi')}</div>
       <div class="fg"><label class="fl">Hobby Name</label><input class="fi" id="mHn" value="${ex?.name||''}"></div>
-      <button class="btn-save" onclick="saveM()">ðŸ’¾ Save</button>`,
+      <button class="btn-save" onclick="saveM()">Save</button>`,
 
     blog:`
       <div class="fg"><label class="fl">Post Title</label><input class="fi" id="mBt" value="${ex?.title||''}"></div>
@@ -1104,7 +1445,7 @@ function openModal(tp,ex=null){
         <div class="fg"><label class="fl">Read Time</label><input class="fi" id="mBr" value="${ex?.readTime||'3 min read'}"></div>
         <div class="fg"><label class="fl">External URL</label><input class="fi" id="mBu" value="${ex?.url||''}"></div>
       </div>
-      <button class="btn-save" onclick="saveM()">ðŸ’¾ Save</button>`,
+      <button class="btn-save" onclick="saveM()">Save</button>`,
 
     social:`
       <div class="fg"><label class="fl">Platform</label>
@@ -1115,7 +1456,7 @@ function openModal(tp,ex=null){
       </div>
       <div class="fg"><label class="fl">Display Name / Handle</label><input class="fi" id="mSocH" value="${ex?.handle||''}"></div>
       <div class="fg"><label class="fl">Profile URL</label><input class="fi" id="mSocU" value="${ex?.url||''}"></div>
-      <button class="btn-save" onclick="saveM()">ðŸ’¾ Save</button>`
+        <button class="btn-save" onclick="saveM()">Save</button>`
   };
 
   document.getElementById('modalBody').innerHTML=forms[tp]||'<p>Unknown type</p>';
@@ -1129,6 +1470,8 @@ function openModal(tp,ex=null){
       if(f){const inp=dz.querySelector('input[type=file]');if(inp){const dt=new DataTransfer();dt.items.add(f);inp.files=dt.files;inp.dispatchEvent(new Event('change'));}}
     });
   });
+
+  initModalMediaPreviews();
 
   document.getElementById('modal').classList.add('on');
 }
@@ -1213,7 +1556,7 @@ function showToast(msg,type='success'){
   const canvas = document.getElementById('neonCanvas');
   const ctx = canvas.getContext('2d');
   let W, H, particles = [];
-  const COLORS = ['rgba(0,229,200,', 'rgba(0,180,255,', 'rgba(139,92,246,'];
+  const COLORS = ['rgba(176,132,255,', 'rgba(255,94,168,', 'rgba(255,211,143,'];
   function resize(){ W = canvas.width = window.innerWidth; H = canvas.height = window.innerHeight; }
   resize();
   window.addEventListener('resize', resize);
@@ -1251,7 +1594,7 @@ function showToast(msg,type='success'){
           ctx.beginPath();
           ctx.moveTo(particles[i].x,particles[i].y);
           ctx.lineTo(particles[j].x,particles[j].y);
-          ctx.strokeStyle='rgba(0,229,200,'+(0.08*(1-dist/100))+')';
+          ctx.strokeStyle='rgba(176,132,255,'+(0.08*(1-dist/100))+')';
           ctx.lineWidth=.5;
           ctx.stroke();
         }
@@ -1285,15 +1628,15 @@ function showToast(msg,type='success'){
       if(!deleting){
         roleEl.textContent = current.slice(0,ci+1);
         ci++;
-        if(ci===current.length){ deleting=true; _typeTimer=setTimeout(typeRole,1800); return; }
+        if(ci===current.length){ deleting=true; _typeTimer=setTimeout(typeRole,700); return; }
       } else {
         roleEl.textContent = current.slice(0,ci-1);
         ci--;
         if(ci===0){ deleting=false; ri=(ri+1)%roles.length; }
       }
-      _typeTimer=setTimeout(typeRole, deleting?60:100);
+      _typeTimer=setTimeout(typeRole, deleting?35:55);
     }
-    _typeTimer=setTimeout(typeRole, 1200);
+    _typeTimer=setTimeout(typeRole, 260);
   }
   startTyping();
   // expose so renderHero can restart it after admin save
@@ -1308,6 +1651,7 @@ function showToast(msg,type='success'){
   checkMaintenance();
   renderAll();
   initReveal();
+  initMotionStudio();
 })();
 
 window.addEventListener('scroll',()=>{
