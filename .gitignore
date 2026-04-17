@@ -1,0 +1,6 @@
+# Temporary local tunneling binaries
+cloudflared.exe
+
+# Local logs and system files
+*.log
+Thumbs.db
