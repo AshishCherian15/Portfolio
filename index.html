@@ -13,12 +13,41 @@ const _supa = supabase.createClient(
   'sb_publishable_4gVgH9SMqhRa8wQjtXHtOA_AHaibHcH'
 );
 const BUCKET = 'portfolio';
+const NET_RETRIES = 2;
+
+function errText(err, fallback='Unexpected error'){
+  if(!err) return fallback;
+  if(typeof err==='string') return err;
+  return err.message || err.error_description || err.details || fallback;
+}
+function isNetworkIssue(err){
+  const txt=errText(err,'').toLowerCase();
+  return txt.includes('network') || txt.includes('fetch') || txt.includes('timeout') || txt.includes('failed to fetch');
+}
+function delay(ms){ return new Promise(resolve=>setTimeout(resolve, ms)); }
+async function withRetry(task,{retries=NET_RETRIES,label='Request'}={}){
+  let lastErr;
+  for(let i=0;i<=retries;i++){
+    try { return await task(); }
+    catch(err){
+      lastErr=err;
+      const shouldRetry=i<retries && isNetworkIssue(err);
+      if(!shouldRetry) break;
+      await delay(350*(i+1));
+    }
+  }
+  throw new Error(`${label}: ${errText(lastErr)}`);
+}
+
 async function supaUpload(path, file){
-  const { error } = await _supa.storage.from(BUCKET).upload(path, file, {upsert:true});
-  if(error) throw new Error(error.message);
-  const { data, error: signErr } = await _supa.storage.from(BUCKET).createSignedUrl(path, 60*60*24*365);
-  if(signErr) throw new Error(signErr.message);
-  return data.signedUrl;
+  if(!navigator.onLine) throw new Error('You are offline. Reconnect and retry upload.');
+  return withRetry(async()=>{
+    const { error } = await _supa.storage.from(BUCKET).upload(path, file, {upsert:true});
+    if(error) throw error;
+    const { data, error: signErr } = await _supa.storage.from(BUCKET).createSignedUrl(path, 60*60*24*365);
+    if(signErr) throw signErr;
+    return data?.signedUrl || '';
+  },{label:'Upload failed'});
 }
 </script>
 <style>
@@ -2153,6 +2182,7 @@ let D = JSON.parse(JSON.stringify(DEFS));
 let _eid = null, _etyp = null;
 let VIS_DRAFT = null;
 const ADMIN_ROUTE = 'crm-studio-24h';
+let RUNTIME_HEALTH_DONE = false;
 
 function esc(v){
   return String(v??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
@@ -2298,9 +2328,24 @@ function handleSecretAdminRoute(){
   }
 }
 
+async function runRuntimeHealthChecks(){
+  if(RUNTIME_HEALTH_DONE) return;
+  RUNTIME_HEALTH_DONE=true;
+  try {
+    const tableCheck=await _supa.from('portfolio').select('id').limit(1);
+    if(tableCheck?.error) throw tableCheck.error;
+    const bucketCheck=await _supa.storage.from(BUCKET).list('',{limit:1});
+    if(bucketCheck?.error) throw bucketCheck.error;
+    updateSaveStatus('Live Save Enabled');
+  } catch(e){
+    updateSaveStatus('Error');
+    showToast('Supabase configuration issue: '+errText(e),'error');
+  }
+}
+
 async function loadData(){
   try {
-    const{data,error}=await _supa.from('portfolio').select('data').eq('id',1).single();
+    const{data,error}=await withRetry(()=>_supa.from('portfolio').select('data').eq('id',1).single(),{label:'Data load failed'});
     if(error) throw error;
     if(data?.data) D=deepMerge(JSON.parse(JSON.stringify(DEFS)),data.data);
     normalizeMediaData();
@@ -2309,21 +2354,32 @@ async function loadData(){
     console.warn('Supabase load failed, using defaults:',e);
     D=JSON.parse(JSON.stringify(DEFS));
     normalizeMaintenanceWindow();
+    const msg=errText(e);
+    if(msg.toLowerCase().includes('permission')||msg.toLowerCase().includes('row-level')) showToast('Supabase permissions blocked data load. Using defaults.','error');
+    else if(!navigator.onLine) showToast('Offline mode: using default local data.','info');
+    else showToast('Could not load cloud data, using defaults.','info');
   }
 }
 async function saveData(silent){
+  if(!navigator.onLine){
+    updateSaveStatus('Offline');
+    if(!silent) showToast('Offline: reconnect to save changes.','error');
+    return false;
+  }
   updateSaveStatus('Saving');
   try {
-    const{error}=await _supa.from('portfolio').upsert({id:1,data:D});
+    const{error}=await withRetry(()=>_supa.from('portfolio').upsert({id:1,data:D}),{label:'Save failed'});
     if(error) throw error;
     const adminOpen=document.getElementById('adminPanel')?.classList.contains('on');
     if(!adminOpen){ renderAll(); setTimeout(()=>{reobserve();},80); }
     updateSaveStatus('Saved');
     setTimeout(()=>{ if(document.querySelector('.adm-status-pill')?.textContent.startsWith('Saved')) updateSaveStatus('Live Save Enabled'); },1800);
     if(!silent) showToast('Saved!','success');
+    return true;
   } catch(e){
     updateSaveStatus('Error');
-    showToast('Save failed: '+e.message,'error');
+    showToast(errText(e,'Save failed'),'error');
+    return false;
   }
 }
 
@@ -2344,17 +2400,28 @@ function exportPortfolio(){
 async function importPortfolio(inp){
   const f=inp?.files?.[0]; if(!f) return;
   try {
+    if(f.size>5*1024*1024) throw new Error('Backup file is too large (max 5MB).');
     const raw=await f.text();
+    if(raw.length>6*1024*1024) throw new Error('Backup content is too large.');
     const parsed=JSON.parse(raw);
+    if(!parsed || typeof parsed!=='object' || Array.isArray(parsed)) throw new Error('Backup must be a JSON object.');
+    const arrayKeys=['education','skills','projects','experience','certificates','gallery','activities','languages','hobbies','blog','social'];
+    for(const key of arrayKeys){
+      if(key in parsed && !Array.isArray(parsed[key])) throw new Error(`Invalid backup: ${key} must be an array.`);
+    }
+    if('profile' in parsed && (typeof parsed.profile!=='object' || Array.isArray(parsed.profile))) throw new Error('Invalid backup: profile must be an object.');
+    if('contact' in parsed && (typeof parsed.contact!=='object' || Array.isArray(parsed.contact))) throw new Error('Invalid backup: contact must be an object.');
+    if('maintenance' in parsed && (typeof parsed.maintenance!=='object' || Array.isArray(parsed.maintenance))) throw new Error('Invalid backup: maintenance must be an object.');
     D=deepMerge(JSON.parse(JSON.stringify(DEFS)),parsed);
     normalizeMediaData();
     normalizeMaintenanceWindow();
-    await saveData(true);
+    const ok=await saveData(true);
+    if(!ok) throw new Error('Backup imported locally, but cloud save failed.');
     renderAll();
     fillAdminForms();
     showToast('Backup imported','success');
   } catch(e){
-    showToast('Import failed: '+e.message,'error');
+    showToast('Import failed: '+errText(e),'error');
   } finally {
     inp.value='';
   }
@@ -2936,6 +3003,7 @@ function openAdmin(){
   document.getElementById('pubView').style.display='none';
   document.getElementById('nav').style.display='none';
   document.body.classList.remove('admin-live-preview');
+  runRuntimeHealthChecks();
   checkMaintenance(); fillAdminForms(); renderAdminAll();
 }
 function goPreview(){
@@ -3164,6 +3232,7 @@ async function uploadAv(input){
 function saveGHUser(){ D.github.ghUser2=document.getElementById('ghUser2').value.trim(); saveData(true); renderActivities(); showToast("GitHub username saved!","success"); }
 async function uploadResume(input){
   const f=input.files[0]; if(!f) return;
+  if(!navigator.onLine){ showToast('You are offline. Resume upload requires internet.','error'); return; }
   if(f.size>20*1024*1024){showToast("File too large (max 20MB)","error");document.getElementById('resumeErr').style.display='block';return;}
   document.getElementById('resumeErr').style.display='none';
   document.getElementById('resumeStatus').textContent='⏳ Uploading...';
@@ -3173,8 +3242,8 @@ async function uploadResume(input){
     setResumePreview(url);
     document.getElementById('resumeStatus').textContent='✅ Uploaded: '+f.name;
     document.getElementById('resumeLastUpdated').textContent='Last updated: '+D.resume.lastUpdated;
-    saveData();
-  } catch(e){ document.getElementById('resumeErr').style.display='block'; document.getElementById('resumeStatus').textContent=''; showToast("Upload failed: "+e.message,"error"); }
+    await saveData();
+  } catch(e){ document.getElementById('resumeErr').style.display='block'; document.getElementById('resumeStatus').textContent=''; showToast("Upload failed: "+errText(e),"error"); }
 }
 function saveResumeUrl(){
   const url=document.getElementById('resumeUrl').value.trim();
@@ -3224,7 +3293,17 @@ if(rdz){
   rdz.addEventListener('drop',e=>{
     e.preventDefault();rdz.classList.remove('drag-over');
     const f=e.dataTransfer.files[0];
-    if(f){const inp=document.getElementById('resumeInput');const dt=new DataTransfer();dt.items.add(f);inp.files=dt.files;uploadResume(inp);}
+    if(f){
+      const inp=document.getElementById('resumeInput');
+      try {
+        const dt=new DataTransfer();
+        dt.items.add(f);
+        inp.files=dt.files;
+        uploadResume(inp);
+      } catch(_){
+        showToast('Drag-drop is limited in this browser. Please click to select resume file.','info');
+      }
+    }
   });
 }
 
@@ -3357,7 +3436,8 @@ async function handleUpload(inp,mId,tId,iId,vId,pId){
   const f=inp.files[0]; if(!f) return;
   const errEl=document.getElementById('uerr_'+mId); errEl.style.display='none';
   const prog=document.getElementById('up_'+mId); if(prog) prog.style.display='block';
-  if(f.size>20*1024*1024){errEl.textContent='❌ File too large (max 20MB)';errEl.style.display='block';showToast("File too large","error");return;}
+  if(!navigator.onLine){ if(prog) prog.style.display='none'; errEl.textContent='❌ You are offline. Reconnect and retry.'; errEl.style.display='block'; showToast('Offline upload blocked','error'); return; }
+  if(f.size>20*1024*1024){ if(prog) prog.style.display='none'; errEl.textContent='❌ File too large (max 20MB)';errEl.style.display='block';showToast("File too large","error");return;}
   const isVid=f.type.startsWith('video/'); const isPdf=f.type==='application/pdf';
   showToast("Uploading...","info");
   try {
@@ -3370,7 +3450,7 @@ async function handleUpload(inp,mId,tId,iId,vId,pId){
     else{img.src=src;img.style.display='block';}
     if(prog) prog.style.display='none';
     showToast("Uploaded! Click Save to apply.","success");
-  } catch(e){ if(prog) prog.style.display='none'; errEl.textContent='❌ Upload failed: '+e.message; errEl.style.display='block'; showToast("Upload failed","error"); }
+  } catch(e){ if(prog) prog.style.display='none'; errEl.textContent='❌ Upload failed: '+errText(e); errEl.style.display='block'; showToast("Upload failed","error"); }
 }
 function openModal(tp,ex=null){
   _eid=ex?ex.id:null; _etyp=tp;
@@ -3397,7 +3477,19 @@ function openModal(tp,ex=null){
     dz.addEventListener('drop',e=>{
       e.preventDefault();dz.classList.remove('drag-over');
       const f=e.dataTransfer.files[0];
-      if(f){const inp=dz.querySelector('input[type=file]');if(inp){const dt=new DataTransfer();dt.items.add(f);inp.files=dt.files;inp.dispatchEvent(new Event('change'));}}
+      if(f){
+        const inp=dz.querySelector('input[type=file]');
+        if(inp){
+          try {
+            const dt=new DataTransfer();
+            dt.items.add(f);
+            inp.files=dt.files;
+            inp.dispatchEvent(new Event('change'));
+          } catch(_){
+            showToast('Drag-drop file assignment is limited in this browser. Please click to upload.','info');
+          }
+        }
+      }
     });
   });
   document.getElementById('modal').classList.add('on');
@@ -3608,6 +3700,14 @@ document.addEventListener('keydown',e=>{
   if(e.key==='Escape' && document.getElementById('photoEditor').classList.contains('on')) closeAvatarEditor(true);
 });
 window.addEventListener('hashchange',handleSecretAdminRoute);
+window.addEventListener('offline',()=>{
+  updateSaveStatus('Offline');
+  showToast('You are offline. Changes cannot be saved to cloud right now.','error');
+});
+window.addEventListener('online',()=>{
+  updateSaveStatus('Live Save Enabled');
+  showToast('Back online. Cloud save is available again.','success');
+});
 
 window.addEventListener('scroll',()=>{
   const v=D.visibility||{};
