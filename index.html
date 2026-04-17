@@ -371,7 +371,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   --shape-line-1: polygon(50% 4%, 71% 11%, 86% 25%, 92% 50%, 86% 75%, 71% 89%, 50% 96%, 29% 89%, 14% 75%, 8% 50%, 14% 25%, 29% 11%);
   --shape-line-2: polygon(50% 5%, 69% 12%, 83% 26%, 89% 50%, 83% 74%, 69% 88%, 50% 95%, 31% 88%, 17% 74%, 11% 50%, 17% 26%, 31% 12%);
   position: relative;
-  width: clamp(280px, 36vw, 560px);
+  width: clamp(240px, 28vw, 430px);
   aspect-ratio: 0.92 / 1;
   display: flex;
   align-items: center;
@@ -441,8 +441,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   animation: ringRotate 20s linear infinite;
   display: none;
 }
-.hex-ring1 { width: min(96vw, 470px); height: min(96vw, 470px); border: 1px dashed rgba(0,229,200,.22); animation-duration: 20s; }
-.hex-ring2 { width: min(104vw, 520px); height: min(104vw, 520px); border: 1px dashed rgba(139,92,246,.15); animation-duration: 30s; animation-direction: reverse; }
+.hex-ring1 { width: min(88vw, 400px); height: min(88vw, 400px); border: 1px dashed rgba(0,229,200,.22); animation-duration: 20s; }
+.hex-ring2 { width: min(96vw, 440px); height: min(96vw, 440px); border: 1px dashed rgba(139,92,246,.15); animation-duration: 30s; animation-direction: reverse; }
 .hex-badge {
   position: absolute; bottom: 10px; right: 0;
   background: rgba(10,18,30,.95); border: 1px solid rgba(0,229,200,.22);
@@ -1430,11 +1430,11 @@ footer::before {
   .hero-left { text-align: center; }
   .hero-tagline { margin-left: auto; margin-right: auto; }
   .hero-btns, .hero-socials { justify-content: center; }
-  .hex-wrap { width: min(420px, 100%); }
+  .hex-wrap { width: min(360px, 100%); }
   .hex-outer { width: 100%; height: 100%; }
-  .dev-scene { width: min(480px, 100%); }
-  .hex-ring1 { width: min(300px, 100vw); height: min(300px, 100vw); }
-  .hex-ring2 { width: min(340px, 100vw); height: min(340px, 100vw); }
+  .dev-scene { width: min(420px, 100%); }
+  .hex-ring1 { width: min(280px, 100vw); height: min(280px, 100vw); }
+  .hex-ring2 { width: min(320px, 100vw); height: min(320px, 100vw); }
   .about-grid { grid-template-columns: 1fr; gap: 36px; }
   .contact-grid { grid-template-columns: 1fr; gap: 36px; }
   .proj-grid { grid-template-columns: repeat(auto-fill, minmax(280px,1fr)); }
@@ -1481,7 +1481,7 @@ footer::before {
 }
 @media (max-width: 480px) {
   .hero-name { font-size: 3rem !important; letter-spacing: .05em !important; }
-  .hex-wrap { width: min(320px, 100%); }
+  .hex-wrap { width: min(280px, 100%); }
   .hex-outer { width: 100%; height: 100%; }
   .hex-ring1, .hex-ring2 { display:none; }
   .photo-editor-grid { grid-template-columns: 1fr; }
@@ -1743,6 +1743,7 @@ footer::before {
   <div class="foot-inner">
     <p class="foot-text">Made by <strong>Ashish Cherian</strong> © 2026</p>
   </div>
+  <button class="footer-admin-gear" type="button" aria-label="Admin login" title="Admin login" onclick="showLogin()"><i class="fas fa-cog"></i></button>
 </footer>
 </div><!-- /pubView -->
 
