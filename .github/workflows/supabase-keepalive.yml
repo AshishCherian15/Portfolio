@@ -15,7 +15,7 @@ jobs:
     env:
       SUPABASE_URL: ${{ secrets.SUPABASE_PROJECT_URL }}
       SUPABASE_API_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY || secrets.SUPABASE_ANON_KEY }}
-      SUPABASE_TABLE: ${{ vars.SUPABASE_KEEPALIVE_TABLE }}
+      SUPABASE_TABLE: ${{ secrets.SUPABASE_KEEPALIVE_TABLE || vars.SUPABASE_KEEPALIVE_TABLE }}
 
     steps:
       - name: Validate required configuration
@@ -34,7 +34,7 @@ jobs:
           fi
 
           if [ -z "${SUPABASE_TABLE}" ]; then
-            echo "Missing repo variable: SUPABASE_KEEPALIVE_TABLE"
+            echo "Missing table name: add SUPABASE_KEEPALIVE_TABLE as a secret or repository variable"
             exit 1
           fi
 
